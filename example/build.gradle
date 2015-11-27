@@ -1,0 +1,37 @@
+group 'spring-mvc-example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework:spring-aop:4.2.2.RELEASE')
+    compile('org.springframework:spring-aspects:4.2.2.RELEASE')
+    compile('org.springframework:spring-orm:4.2.2.RELEASE')
+    compile('org.springframework:spring-context:4.2.2.RELEASE')
+    compile('org.springframework:spring-webmvc:4.2.2.RELEASE')
+//add   mongodn   support
+//    compile('org.springframework:spring-data-mongodb-1.1.1.RELEASE')
+
+
+    compile("org.springframework.security:spring-security-web:4.0.2.RELEASE")
+    compile("org.springframework.security:spring-security-config:4.0.2.RELEASE")
+    compile("org.springframework.security:spring-security-test:4.0.3.RELEASE")
+
+    compile('org.hibernate:hibernate-core:5.0.1.Final')
+    runtime('org.hibernate:hibernate-java8:5.0.1.Final')
+    compile('org.hibernate:hibernate-validator:5.2.1.Final')
+
+    compile("org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE")
+    compile("org.thymeleaf:thymeleaf:2.1.4.RELEASE")
+    compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE')
+
+    compile('org.projectlombok:lombok:1.16.6')
+    providedCompile('javax.servlet:javax.servlet-api:3.1.0')
+
+}

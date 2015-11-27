@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<!--
+   - JNDI用プロパティの設定。
+   - OracleとPostgreSQL環境用の設定を準備しているので、自端末の環境に合った方を利用する。
+   - 【記述書式】を参考にして、自端末の環境に合った値に【設定例】を書き換える。
+   -
+   - JNDIを使用しない場合は、「/webapps/WEB-INF/applicationContext.xml」の
+   - データソースのBean定義を書き換える。
+-->
+
+<!--
+   - 「データベースがOracleの場合の設定」
+   - 【記述書式】
+   - driverClassName=[ドライバ名称]
+   - username=[データベースログイン名称]
+   - password=[データベースログインパスワード]
+   - url=jdbc:oracle:thin:@[データベースサーバIPアドレス]:[ポート番号]:[インスタンス名]
+   - 【設定例】
+-->
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="com.mysql.jdbc.Driver"
+     username="root"
+     password="jackyao713"
+     url="jdbc:mysql://localhost:3306/training"
+     useUnicode="true"
+     characterEncoding="UTF-8"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="oracle.jdbc.OracleDriver"
+     username="training"
+     password="training"
+     url="jdbc:oracle:thin:@172.20.2.146:1521:orcl"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+
+
+   - 「データベースがPostgreSQLの場合の設定」
+   - 【記述書式】
+   - driverClassName=[ドライバ名称]
+   - username=[データベースログイン名称]
+   - password=[データベースログインパスワード]
+   - url=jdbc:postgresql://[データベースサーバIPアドレス]:[ポート番号]/[データベース名称]
+   - 【設定例】
+-->
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.postgresql.Driver"
+     username="postgres"
+     password=""
+     url="jdbc:postgresql://127.0.0.1:5432/sampledb"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->
+
+<!--
+   - 「データベースがhsqldbの場合の設定」
+   - 【記述書式】
+   - driverClassName=[ドライバ名称]
+   - username=[データベースログイン名称]
+   - password=[データベースログインパスワード]
+   - url=jdbc:hsqldb:hsql://[データベースサーバIPアドレス]:[ポート番号]/[データベース名称]
+   - 【設定例】
+-->
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.hsqldb.jdbcDriver"
+     username="sa"
+     password=""
+     url="jdbc:hsqldb:hsql://127.0.0.1:9001/terasoluna"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->
+
+<!--
+   - 「データベースがH2DBの場合の設定」
+   - 【記述書式】
+   - driverClassName=[ドライバ名称]
+   - username=[データベースログイン名称]
+   - password=[データベースログインパスワード]
+   - url=jdbc:h2:tcp://[データベースサーバIPアドレス]:[ポート番号]/[データベース名称]
+   - 【設定例】
+-->
+<!--
+<Context>
+  <Resource
+     name="jdbc/TerasolunaSampleDataSource"
+     type="javax.sql.DataSource"
+     driverClassName="org.h2.Driver"
+     username="sa"
+     password="sa"
+     url="jdbc:h2:tcp://localhost/~/terasoluna"
+     maxIdle="2"
+     maxWait="5000"
+     maxActive="4"/>
+</Context>
+-->

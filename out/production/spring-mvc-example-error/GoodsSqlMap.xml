@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+            PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+            "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- SqlMap定義 -->
+<sqlMap namespace="Goods">
+	<select id="searchGoodsList" resultClass="cn.spring.goods.form.GoodsForm">
+		SELECT id, type, name, picture, context, price
+		FROM goods_tab
+		ORDER BY type
+	</select>
+	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
+		SELECT id, type, name, picture, context, price
+		FROM goods_tab
+		WHERE type = #type#
+		ORDER BY type
+	</select>
+	<select id="searchGoodById" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
+		SELECT id, type, name, picture, context, price
+		FROM goods_tab
+		WHERE id = #id#
+	</select>
+</sqlMap>
