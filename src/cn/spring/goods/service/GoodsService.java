@@ -30,5 +30,11 @@ public class GoodsService {
 	public List<GoodsForm> searchGoodById(GoodsForm form)
 	{
 		return queryDao.executeForObjectList("Goods.searchGoodById",form);
+
+	}
+
+	public void insertGoods(GoodsForm goodsForm) {
+		updateDao.execute("Goods.insertGoods", goodsForm);
+
 	}
 }

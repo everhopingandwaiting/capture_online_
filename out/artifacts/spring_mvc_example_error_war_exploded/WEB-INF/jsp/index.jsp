@@ -79,6 +79,7 @@
 						<li><a href="initGoods">首页</a></li>
 						<li><a href="initGoods?type=博客">博客类</a></li>
 						<li><a href="initGoods?type=网页">网站类</a></li>
+						<li><a href="initEditGoods">UPLOAD</a></li>
 					</ul>
 					<a href="#" id="pull"><img src="./images/menu-icon.png"
 						title="menu" /></a> </nav>

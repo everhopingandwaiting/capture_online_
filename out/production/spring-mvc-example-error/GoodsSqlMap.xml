@@ -20,4 +20,8 @@
 		FROM goods_tab
 		WHERE id = #id#
 	</select>
+	<insert id="insertGoods" parameterClass="cn.spring.goods.form.GoodsForm">
+		 INSERT  INTO   goods_tab( id ,type ,  name  ,  picture  ,  context  , price )
+		 VALUES   (#id#,#type#, #name#, #picture#,#context#,#price# )
+	</insert>
 </sqlMap>

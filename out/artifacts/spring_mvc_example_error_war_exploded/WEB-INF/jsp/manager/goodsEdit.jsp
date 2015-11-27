@@ -104,7 +104,7 @@
 		</div>
 	</div>
 
-	<form:form action="editGoods" method="POST" commandName="goodsForm">
+	<form:form action="editGoods" method="POST" commandName="goodsForm"  enctype="multipart/form-data">
 		id：<form:input path="id" cssStyle="width:180px;height:2px;color:black;" />
 		<br />
 		<br />
@@ -117,7 +117,7 @@
 		名称：<form:input path="name" cssStyle="width:180px;height:2px;color:black;" />
 		<br />
 		<br />
-		图片：<input type="file" id="picture" onchange="fr(this)"
+		图片：<input type="file" id="picture" name="file" onchange="fr(this)"
 			style="display: inline;" />
 		<img id="i1" width="300" height="200" style="display:none;"/>
 		<br />
