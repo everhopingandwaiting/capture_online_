@@ -45,7 +45,7 @@ public class GoodsController {
 			file.transferTo(tagfile);
 			goodsForm.setPicture("images/" + file.getOriginalFilename());
 			goodsService.insertGoods(goodsForm);
-
+			model.addAttribute("list", goodsService.searchGoodsList());
 		}
 		return modelAndView;
 	}
