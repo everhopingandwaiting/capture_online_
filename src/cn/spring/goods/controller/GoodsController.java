@@ -34,7 +34,7 @@ public class GoodsController {
 //			String type=new String(goodsForm.getType().getBytes("iso8859-1"),"utf-8");
 			String type = goodsForm.getType().toString();
 			System.out.println(type+"&&*&*(^*&%^&%^&$*&^*$^$^&");
-			goodsForm.setType("\u535a\u5ba2");
+			goodsForm.setType(goodsForm.getType());
 			model.addAttribute("list", goodsService.searchConditionGoodsList(goodsForm));
 		}
 		return "index";

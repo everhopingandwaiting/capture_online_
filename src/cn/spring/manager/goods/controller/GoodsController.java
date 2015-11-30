@@ -44,6 +44,7 @@ public class GoodsController {
 			}
 			file.transferTo(tagfile);
 			goodsForm.setPicture("images/" + file.getOriginalFilename());
+			goodsForm.setType(new String(goodsForm.getType().getBytes("utf-8"),"utf-8"));
 			goodsService.insertGoods(goodsForm);
 			model.addAttribute("list", goodsService.searchGoodsList());
 		}
