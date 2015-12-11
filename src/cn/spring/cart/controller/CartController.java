@@ -14,6 +14,11 @@ import cn.spring.cart.form.CartForm;
 import cn.spring.cart.service.CartService;
 import cn.spring.goods.service.GoodsService;
 import cn.spring.web.form.UVO;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.UUID;
 
 @Slf4j
 @Controller("CartController")
@@ -31,13 +36,17 @@ public class CartController {
 //		log.info("加入购物车");
 		UVO uvo = (UVO)session.getAttribute("UVO");
 		if (uvo != null) {
+			cartForm.setGoodsUUID(UUID.randomUUID().toString().substring(1, 20));
+			cartForm.setGoodsDate(new Timestamp(new Date().getTime()));
 			cartForm.setGuestId(uvo.getUserId());
-			String id =  String.valueOf(System.currentTimeMillis());
-			cartForm.setId(id);
+//			String id =  String.valueOf(System.currentTimeMillis());
+
 			cartService.addCart(cartForm);
 		}
-		model.addAttribute("list", goodsService.searchGoodsList());
-		return "index";
+//		model.addAttribute("list", goodsService.searchGoodsList());
+
+
+		return "/";
 	}
 	
 	@RequestMapping(value = "/initCart", method = RequestMethod.GET)
@@ -45,11 +54,12 @@ public class CartController {
 //		log.info("初始化购物车");
 		UVO uvo = (UVO)session.getAttribute("UVO");
 		if (uvo != null) {
+
 			cartForm.setGuestId(uvo.getUserId());
 			model.addAttribute("list", cartService.searchConditionCartList(cartForm));
 			return "cart/cartList";
 		}
-		return "index";
+		return "/";
 	}
 	
 	@RequestMapping(value = "/delCart", method = RequestMethod.GET)
@@ -62,8 +72,20 @@ public class CartController {
 				model.addAttribute("list", cartService.searchConditionCartList(cartForm));
 				return "cart/cartList";
 			}
-		return "index";
+		return "/";
 	}
+    @RequestMapping(value = "/deleteSelected", params = "deleteIDS",method = RequestMethod.GET)
+    public String deleteSelected(@RequestParam("id") int []ids ,Model model, CartForm cartForm, HttpSession session) {
+		log.info("从购物车删除");
+        cartService.deleteSelected(ids);
+        UVO uvo = (UVO)session.getAttribute("UVO");
+        if (uvo != null) {
+            cartForm.setGuestId(uvo.getUserId());
+            model.addAttribute("list", cartService.searchConditionCartList(cartForm));
+            return "cart/cartList";
+        }
+        return "/";
+    }
 	
 	@RequestMapping(value = "/account", method = RequestMethod.GET)
 	public String account(Model model, CartForm cartForm) {

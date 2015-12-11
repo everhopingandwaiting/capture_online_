@@ -5,7 +5,7 @@
 <!-- SqlMap定義 -->
 <sqlMap namespace="Cart">
 	<insert id="addCart" parameterClass="cn.spring.cart.form.CartForm">
-		INSERT INTO cart_tab(id, goods_id, guest_id) values(#id#, #goodsId#, #guestId#)
+		INSERT INTO cart_tab(uuid, goods_id, guest_id,date) values(#goodsUUID#, #goodsId#, #guestId#,#goodsDate#)
 	</insert>
 	<select id="searchCart" parameterClass="cn.spring.cart.form.CartForm" resultClass="java.lang.Integer">
 		SELECT count(0)
@@ -20,8 +20,10 @@
 			b.type as goodsType,
 			b.name as goodsName, 
 			b.picture as goodsPicture, 
-			b.context as goodsContext, 
-			b.price as goodsPrice
+			b.information as goodsContext,
+			b.price as goodsPrice,
+			a.date AS goodsDate,
+			a.uuid AS  goodsUUID
 		FROM cart_tab a, goods_tab b
 		WHERE a.goods_id=b.id
 		AND a.guest_id=#guestId#
@@ -30,6 +32,17 @@
 		DELETE FROM cart_tab
 		WHERE id=#id#
 	</delete>
+
+    <!-- delete   selected-->
+    <delete id="DelSelected"  parameterClass="java.util.List"  >
+        delete
+        from cart_tab
+        where id in
+        <iterate conjunction="," open="(" close=")" >
+            #[]#
+        </iterate>
+    </delete>
+
 	<delete id="account" parameterClass="cn.spring.cart.form.CartForm">
 		DELETE FROM cart_tab
 		WHERE guest_id=#guestId#

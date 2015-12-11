@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import cn.spring.guest.form.GuestForm;
 
+import java.util.Arrays;
+
 @Service
 public class GuestService {
 
@@ -17,7 +19,12 @@ public class GuestService {
 	@Autowired
 	UpdateDAO updateDao;
 	
-	public Integer searchGuest(GuestForm frm) {
-		return queryDao.executeForObject("Guest.searchGuest", frm, Integer.class);
+	public GuestForm searchGuest(GuestForm frm) {
+		return queryDao.executeForObject("Guest.searchGuest", frm, GuestForm.class);
 	}
+
+	public void insertGuest(GuestForm guestForm) {
+		updateDao.execute("Guest.insertGuest", guestForm);
+        Arrays.asList(new int[]{1});
+    }
 }

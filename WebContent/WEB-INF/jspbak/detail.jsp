@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jsp/include.jsp"%>
+    pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/include.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,14 +14,11 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
-	
-	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
 </script>
+
 <!---- start-smoth-scrolling---->
-<script type="text/javascript" src="./js/move-top.js"> </script>
+<script type="text/javascript" src="./js/move-top.js"></script>
 <script type="text/javascript" src="./js/easing.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -56,26 +53,6 @@
 			}
 		});
 	});
-
-	function fr(source) {
-		var file = source.files[0];
-		if (window.FileReader) {
-
-			var r = new FileReader();
-			r.onloadend = function(e) {
-				var t = e.target.result;
-				document.getElementById("i1").src = t;
-				document.getElementById("i1").style.display='inline';
-				//document.getElementById("d1").innerHTML=t;
-			};
-			r.onerror = function(e) {
-			};
-			r.readAsDataURL(file);
-		} else {
-			document.writeln("你的浏览器不支持");
-		}
-
-	}
 </script>
 <!----//End-top-nav-script---->
 </head>
@@ -91,8 +68,15 @@
 					<!----start-top-nav---->
 					<nav class="top-nav">
 					<ul class="top-nav">
-						<li class="active"><a href="initLogin">登录</a></li>
-						<li class="active"><a href="initGoods">首页</a></li>
+						<c:choose>
+							<c:when test="${sessionScope.UVO.userId==null}">
+								<li><a href="initLogin">登录</a></li>
+							</c:when>
+							<c:otherwise>
+								<li><a href="initCart">${sessionScope.UVO.userId}</a></li>
+							</c:otherwise>
+						</c:choose>
+						<li><a href="initGoods">首页</a></li>
 						<li><a href="initGoods?type=博客">博客类</a></li>
 						<li><a href="initGoods?type=网页">网站类</a></li>
 					</ul>
@@ -103,36 +87,32 @@
 			</div>
 		</div>
 	</div>
-
-	<form:form action="editGoods" method="POST" commandName="goodsForm"  enctype="multipart/form-data">
-		id：<form:input path="id" cssStyle="width:180px;height:2px;color:black;" />
-		<br />
-		<br />
-		类型：<form:select path="type" cssStyle="width:180px;height:30px">
-				<form:option value="网页">网页</form:option>
-				<form:option value="博客">博客</form:option>
-			</form:select>
-		<br />
-		<br />
-		名称：<form:input path="name" cssStyle="width:180px;height:2px;color:black;" />
-		<br />
-		<br />
-		图片：<input type="file" id="picture" name="file" onchange="fr(this)"
-			style="display: inline;" />
-		<img id="i1" width="300" height="200" style="display:none;"/>
-		<br />
-		<br />
-		简介：<form:textarea path="context" cols="5"
-			cssStyle="width:500px;height:130px" />
-		<br />
-		<br />
-		价格：<form:input path="price" cssStyle="width:180px;height:2px;color:black;" />
-		<br />
-		<br />
-		<input type="submit" value="提交" style="color:black;" />
-	</form:form>
-
-
+	<div id="blog" class="blog">
+		<div class="container">
+			<div class="news">
+				<c:forEach items="${list}" var="goods" varStatus="status">
+					<div class="col-md-4 blog_grid">
+						<img src="${goods.picture}" alt="" width="350px" height="233px" />
+						<div class="team-info">
+							<div class="team-head">
+								<h3>${goods.name}</h3>
+								<span>${goods.price}</span>
+							</div>
+							<div class="n-icons">
+								<ul class="n-social unstyled-list list-inline">
+									<div class="slide-btns">
+										<a class="livedemo" href="addCart?goodsId=${goods.id}">加入购物车</a>
+									</div>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<p>${goods.context}</p>
+					</div>
+				</c:forEach>
+			</div>
+		</div>
+	</div>
 	<!---------/start-footer--------->
 	<div class="footer">
 		<div class="container">

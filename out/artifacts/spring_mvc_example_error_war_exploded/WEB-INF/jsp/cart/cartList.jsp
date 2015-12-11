@@ -1,147 +1,123 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: john
+  Date: 15-12-6
+  Time: 下午3:06
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jsp/include.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+         pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/include.jsp"%>
+<!DOCTYPE html>
+<html >
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Perge bootstrap Website Template | Home :: w3layouts</title>
-<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="./js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<link href="./css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript">
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
+  <title>Blog</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.equalheights.js"></script>
+  <script src="js/jquery.mobilemenu.js"></script>
+  <script src="js/tmStickUp.js"></script>
+  <script src="js/jquery.ui.totop.js"></script>
+  <script>
+    $(window).load(function(){
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      $('#stuck_container').tmStickUp({});
+    });
 
-<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="./js/move-top.js"></script>
-<script type="text/javascript" src="./js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event) {
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop : $(this.hash).offset().top
-			}, 1000);
-		});
-	});
-</script>
-<!---- start-smoth-scrolling---->
-<!--web-fonts -->
-<link
-	href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Roboto:500,100,300,700,900,100italic,400'
-	rel='stylesheet' type='text/css'>
-<!--web-fonts -->
-<!----start-top-nav-script---->
-<script>
-	$(function() {
-		var pull = $('#pull');
-		menu = $('nav ul');
-		menuHeight = menu.height();
-		$(pull).on('click', function(e) {
-			e.preventDefault();
-			menu.slideToggle();
-		});
-		$(window).resize(function() {
-			var w = $(window).width();
-			if (w > 320 && menu.is(':hidden')) {
-				menu.removeAttr('style');
-			}
-		});
-	});
-</script>
-<!----//End-top-nav-script---->
+  </script>
+  <!--[if lt IE 8]>
+  <div style=' clear: both; text-align:center; position: relative;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <link rel="stylesheet" media="screen" href="css/ie.css">
+  <![endif]-->
 </head>
+
 <body>
-	<div class="main-header">
-		<!----- start-header---->
-		<div id="home" class="header">
-			<div class="top-header">
-				<div class="container">
-					<div class="logo">
-						<img src="./images/logo.png" alt="">
-					</div>
-					<!----start-top-nav---->
-					<nav class="top-nav">
-					<ul class="top-nav">
-						<c:choose>
-							<c:when test="${sessionScope.UVO.userId==null}">
-								<li><a href="initLogin">登录</a></li>
-							</c:when>
-							<c:otherwise>
-								<li><a href="initCart">${sessionScope.UVO.userId}</a></li>
-							</c:otherwise>
-						</c:choose>
-						<li><a href="initGoods">首页</a></li>
-						<li><a href="initGoods?type=博客">博客类</a></li>
-						<li><a href="initGoods?type=网页">网站类</a></li>
-					</ul>
-					<a href="#" id="pull"><img src="./images/menu-icon.png"
-						title="menu" /></a> </nav>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="blog" class="blog">
-		<div class="container">
-			<div class="news">
-				<table>
-					<tr>
-						<th style="text-align:center;">图片</th>
-						<th style="text-align:center;">种类</th>
-						<th style="text-align:center;">名称</th>
-						<th style="text-align:center;">简介</th>
-						<th style="text-align:center;">价格</th>
-						<th style="text-align:center;">操作</th>
-					</tr>
-					<c:forEach items="${list}" var="cart" varStatus="status">
-						<tr>
-							<td width="150px" height="130px"><img src="${cart.goodsPicture}" alt="" width="150px" height="130px" /></td>
-							<td width="50px">${cart.goodsType}</td>
-							<td width="150px">${cart.goodsName}</td>
-							<td>${cart.goodsContext}</td>
-							<td width="70px">${cart.goodsPrice}</td>
-							<td width="142px">
-								<div class="n-icons">
-									<ul class="n-social unstyled-list list-inline">
-										<div class="slide-btns">
-											<a class="livedemo" href="delCart?id=${cart.id}">删除</a>
-										</div>
-									</ul>
-								</div>
-							</td>
-						</tr>
-					</c:forEach>
-				</table>
-				<div class="n-icons">
-					<ul class="n-social unstyled-list list-inline">
-						<div class="slide-btns">
-							<a class="livedemo" href="account?guestId=${sessionScope.UVO.userId}">结算</a>
-						</div>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!---------/start-footer--------->
-	<div class="footer">
-		<div class="container">
-			<div class="copy-right">
-				<p>
-					&copy; 2014 All rights Reserved | Template by &nbsp;<a
-						href="http://w3layouts.com">W3Layouts</a>
-				</p>
+<!--==============================
+              header
+=================================-->
+<jsp:include page="../common/header.jsp"/>
+<!--=====================
+          Content
+======================-->
+<section id="content"><div class="ic"></div>
+  <div class="container">
+    <div class="row">
+        <form method="get" action="deleteSelected">
+      <div class="grid_10">
+        <h2>Cart Information</h2>
+        <div>
 
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<!-------//End-footer----------->
+            <div class="blog">
+              <table>
+                <tbody>
+                <tr><th><input id="selectAllButton" type="checkbox"/></th>
+                  <th style="text-align:center;">pic</th>
+                  <th style="text-align:center;">cart_number</th>
+                  <th style="text-align:center;">name</th>
+                  <th style="text-align:center;">date</th>
+                  <th style="text-align:center;">price</th>
+                  <th style="text-align:center;">delete</th>
+                </tr>
+                <c:forEach items="${list}" var="cartForm" varStatus="status">
+                <tr>
+                    <td > <input name="id" type="checkbox" value="${cartForm.id}" /> </td>
+                  <td> <img src="${cartForm.goodsPicture}" width="100" height="50"></td>
+                  <td> ${cartForm.goodsUUID}</td>
+                  <td> ${cartForm.goodsName}</td>
 
+                  <td><div class="fa fa-bookmark">${cartForm.goodsDate} </div>  </td>
+                  <td colspan="2"><div class="fa fa-dollar">${cartForm.goodsPrice}</div> </td>
+
+                  <td>
+                    <a href="delCart?id=${cartForm.id}"><div class="fa fa-undo">
+                      <strong style="font-size: x-large">delete</strong></div>
+                    </a>
+                  </td>
+
+                </tr>
+                    </c:forEach>
+                </tbody>
+              </table>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="grid_2">
+        <h2>cart list </h2>
+        <ul class="list-1">
+          <li><span></span><a href="account?guestId=${sessionScope.UVO.userId}"><div
+                  class="fa fa-chevron-right"></div>pay  all goods </a></li>
+            <li>
+               <input type="submit" class="btn btn-default" id="deleteIDS" name="deleteIDS">
+               delete  select goods </input>
+            </li>
+        </ul>
+      </div>
+    </form>
+    </div>
+  </div>
+</section>
+<!--==============================
+              footer
+=================================-->
+<jsp:include page="../common/footer.jsp"/>
+<a href="#" id="toTop" class="fa fa-chevron-up"></a>
 </body>
 </html>
+

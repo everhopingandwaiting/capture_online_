@@ -5,23 +5,66 @@
 <!-- SqlMap定義 -->
 <sqlMap namespace="Goods">
 	<select id="searchGoodsList" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, type, name, picture, context, price
+		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
-		ORDER BY type
+		ORDER BY view ASC
 	</select>
 	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, type, name, picture, context, price
+		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
 		WHERE type = #type#
 		ORDER BY type
 	</select>
+	<select id="searchConditionGoodsListHot" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
+		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+		FROM goods_tab
+		WHERE type = #type#
+		ORDER BY view DESC  LIMIT #limit#
+	</select>
 	<select id="searchGoodById" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, type, name, picture, context, price
+		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
 		WHERE id = #id#
 	</select>
 	<insert id="insertGoods" parameterClass="cn.spring.goods.form.GoodsForm">
-		 INSERT  INTO   goods_tab( id ,type ,  name  ,  picture  ,  context  , price )
-		 VALUES   (#id#,#type#, #name#, #picture#,#context#,#price# )
+		 INSERT  INTO   goods_tab( category, date, name, tag, comment,view,information,picture,price,type)
+		 VALUES   (#category#, #date#, #name#, #tag#, #comment#,#view#,#information#,#picture#,#price#,#type# )
 	</insert>
+    <update id="updateGoodsById" parameterClass="cn.spring.goods.form.GoodsForm" >
+        UPDATE  goods_tab
+        <dynamic prepend="set">
+            <isNotEmpty prepend="," property="category">
+                 category=#category#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="date">
+                date=#date#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="category">
+                name=#name#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="tag">
+                tag=#tag#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="comment">
+                comment=#comment#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="view">
+                view=#view#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="information">
+                information=#information#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="picture">
+                picture=#picture#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="type">
+                type=#type#
+            </isNotEmpty>
+            <isNotEmpty prepend="," property="price">
+                price=#price#
+            </isNotEmpty>
+        </dynamic>
+
+        where id=#id#
+    </update>
 </sqlMap>

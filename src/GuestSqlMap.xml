@@ -4,10 +4,16 @@
             "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <!-- SqlMap定義 -->
 <sqlMap namespace="Guest">
-	<select id="searchGuest" parameterClass="cn.spring.guest.form.GuestForm" resultClass="java.lang.Integer">
-		SELECT count(0)
+	<select id="searchGuest" parameterClass="cn.spring.guest.form.GuestForm" resultClass="cn.spring.guest.form.GuestForm">
+		SELECT   role,phone,email,id,name,password
 		FROM guest_tab
-		WHERE id=#id#
+		WHERE name=#name#
 		AND password=#password#
 	</select>
+
+	<insert id="insertGuest" parameterClass="cn.spring.guest.form.GuestForm">
+		INSERT  INTO   guest_tab(name, phone, email, password, role)
+		 VALUES (#name#,#phone#, #email#, #password#, #role#)
+	</insert>
+
 </sqlMap>

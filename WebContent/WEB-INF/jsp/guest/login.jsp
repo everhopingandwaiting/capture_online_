@@ -1,113 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/jsp/include.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+		 pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/include.jsp"%>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Perge bootstrap Website Template | Home :: w3layouts</title>
-<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="./js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<link href="./css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
+<title>Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript">
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-</script>
-</script>
-<!---- start-smoth-scrolling---->
-<script type="text/javascript" src="./js/move-top.js"></script>
-<script type="text/javascript" src="./js/easing.js"></script>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event) {
-			event.preventDefault();
-			$('html,body').animate({
-				scrollTop : $(this.hash).offset().top
-			}, 1000);
-		});
-	});
-</script>
-<!---- start-smoth-scrolling---->
-<!--web-fonts -->
-<link
-	href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Roboto:500,100,300,700,900,100italic,400'
-	rel='stylesheet' type='text/css'>
-<!--web-fonts -->
-<!----start-top-nav-script---->
-<script>
-	$(function() {
-		var pull = $('#pull');
-		menu = $('nav ul');
-		menuHeight = menu.height();
-		$(pull).on('click', function(e) {
-			e.preventDefault();
-			menu.slideToggle();
-		});
-		$(window).resize(function() {
-			var w = $(window).width();
-			if (w > 320 && menu.is(':hidden')) {
-				menu.removeAttr('style');
-			}
-		});
-	});
-</script>
-<!----//End-top-nav-script---->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Gifty Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../../../css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="../../../css/style1.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--webfont-->
+<link href='http://fonts.useso.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="../../../js/jquery-1.11.1.min.js"></script>
+<!-- dropdown -->
+<script src="../../../js/jquery.easydropdown.js"></script>
+<!-- start menu -->
+<link href="../../../css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../../../js/megamenu.js"></script>
+<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 </head>
 <body>
-	<div class="main-header">
-		<!----- start-header---->
-		<div id="home" class="header">
-			<div class="top-header">
-				<div class="container">
-					<div class="logo">
-						<img src="./images/logo.png" alt="">
-					</div>
-					<!----start-top-nav---->
-					<nav class="top-nav">
-					<ul class="top-nav">
-						<li class="active"><a href="initLogin">登录</a></li>
-						<li class="active"><a href="initGoods">首页</a></li>
-						<li><a href="initGoods?type=博客">博客类</a></li>
-						<li><a href="initGoods?type=网页">网站类</a></li>
-					</ul>
-					<a href="#" id="pull"><img src="./images/menu-icon.png"
-						title="menu" /></a> </nav>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="blog" class="blog">
-		<div class="container">
-			<div class="news">
-				<form:form action="submitLogin" method="POST" commandName="guestForm">
-					用户名：<form:input path="id" cssStyle="width:180px;height:2px"/><br/>
-					<br/>
-					密&nbsp;&nbsp;&nbsp;&nbsp;码：<form:password path="password" cssStyle="width:180px;height:2px"/><br/>
-					<br/>
-					<input type="submit" value="提交"/>
+
+<jsp:include page="../common/header.jsp"/>
+<section id="content">
+	<div class="ic"></div>
+	<div class="container">
+<div class="men">
+	<div class="container">
+	    <div class="register">
+			<form:form action="submitLogin" method="POST" commandName="guestForm">
+
+			   <div class="col-md-6 login-left">
+			  	 <h3>NEW CUSTOMERS</h3>
+				 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+				 <a class="acount-btn" href="initregister">Create an Account</a>
+			   </div>
+			   <div class="col-md-6 login-right">
+			  	<h3>REGISTERED CUSTOMERS</h3>
+				<p>If you have an account with us, please log in.</p>
+				<form>
+				  <div>
+					<span>User Name as ${guest.name}<label>*</label></span>
+					<form:input path="name" />
+				  </div>
+				  <div>
+					<span>Password<label>*</label></span>
+					 <form:password path="password"/>
+				  </div>
+				  <a class="forgot" href="#">Forgot Your Password?</a>
+
+				 <div class="row"> <input type="submit" value="Login">
+				 </div>
+			    </form>
+			   </div>
+			   <div class="clearfix"> </div>
+
 				</form:form>
-				
-			</div>
 		</div>
-	</div>
-	<!---------/start-footer--------->
-	<div class="footer">
-		<div class="container">
-			<div class="copy-right">
-				<p>
-					&copy; 2014 All rights Reserved | Template by &nbsp;<a
-						href="http://w3layouts.com">W3Layouts</a>
-				</p>
-
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<!-------//End-footer----------->
-
+	 </div>
+</div>
+</div>
+	</section>
+<jsp:include page="../common/footer.jsp"/>
 </body>
-</html>
+</html>		

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1741469306">
-    <data-source source="LOCAL" name="MySQL - training@localhost" uuid="b9ae33ed-c7af-45b9-805a-0adbfa90f7b5">
+  <component name="DataSourceManagerImpl" format="xml" hash="2473068649">
+    <data-source source="LOCAL" name="MySQL - capture_online@localhost" uuid="7edbbf92-a05c-495a-bc73-473581c4b522">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/training</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/capture_online</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

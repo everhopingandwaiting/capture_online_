@@ -5,8 +5,9 @@ import lombok.Data;
 
 @Data
 public class UVO {
-	private String userId;
-	private String password;
-
+	private int userId;
+    private String name;
+    private String password;
+    private String role;
 
 }

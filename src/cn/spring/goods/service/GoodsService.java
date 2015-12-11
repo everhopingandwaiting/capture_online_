@@ -27,6 +27,11 @@ public class GoodsService {
 		System.out.println(frm.getType()+"*^*&%^&$%^*$*^$*^;;; service ");
 		return queryDao.executeForObjectList("Goods.searchConditionGoodsList", frm);
 	}
+
+	public List<GoodsForm> searchConditionGoodsListHot(GoodsForm frm) {
+		System.out.println(frm.getType()+"*^*&%^&$%^*$*^$*^;;; service ");
+		return queryDao.executeForObjectList("Goods.searchConditionGoodsListHot", frm);
+	}
 	public List<GoodsForm> searchGoodById(GoodsForm form)
 	{
 		return queryDao.executeForObjectList("Goods.searchGoodById",form);
@@ -37,4 +42,8 @@ public class GoodsService {
 		updateDao.execute("Goods.insertGoods", goodsForm);
 
 	}
+
+    public Integer updateGoodsById(GoodsForm goodsForm) {
+        return updateDao.execute("Goods.updateGoodsById", goodsForm);
+    }
 }

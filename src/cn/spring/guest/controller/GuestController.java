@@ -2,6 +2,8 @@ package cn.spring.guest.controller;
 
 import javax.servlet.http.HttpSession;
 
+import cn.spring.goods.form.GoodsForm;
+import cn.spring.goods.util.FormUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,19 +30,52 @@ public class GuestController {
 	
 	@RequestMapping(value = "/initLogin", method = RequestMethod.GET)
 	public String initLogin(Model model, GuestForm guestForm) {
+
 		return "guest/login";
 	}
-	
-	@RequestMapping(value = "/submitLogin", method = RequestMethod.POST)
-	public String submitLogin(Model model, GuestForm guestForm, HttpSession session) {
-//		log.info("校验用户信息");
-		if(guestService.searchGuest(guestForm) == 1) {
-			UVO uvo = new UVO();
-			uvo.setUserId(guestForm.getId());
-			uvo.setPassword(guestForm.getPassword());
-			session.setAttribute("UVO", uvo);
-		} 
-		model.addAttribute("list", goodsService.searchGoodsList());
-		return "index";
+	@RequestMapping(value = "/initregister", method = RequestMethod.GET)
+	public String initregister(Model model, GuestForm guestForm) {
+
+		return "guest/register";
 	}
+
+	@RequestMapping(value = "/contacts", method = RequestMethod.GET)
+	public String contacts(Model model, GuestForm guestForm) {
+
+		return "contacts";
+	}
+	@RequestMapping(value = "/submitLogin", method = RequestMethod.POST)
+	public String submitLogin(Model model, GuestForm guestForm, HttpSession session, GoodsForm goodsForm ) {
+//		log.info("校验用户信息");
+        GuestForm form = guestService.searchGuest(guestForm);
+        if (form!=null){
+            UVO uvo = new UVO();
+            uvo.setUserId(form.getId());
+            uvo.setName(form.getName());
+            uvo.setRole(form.getRole());
+
+            uvo.setPassword(guestForm.getPassword());
+            session.setAttribute("UVO", uvo);
+        }
+
+        goodsForm.setType("gallery");
+        model = FormUtil.model(goodsForm, goodsService, model);
+        return "index";
+    }
+
+    @RequestMapping(value = "submitRegister",method = RequestMethod.POST)
+	public String submitRegister(Model model,GuestForm guestForm) {
+
+		guestForm.setRole("user");
+		guestService.insertGuest(guestForm);
+
+		model.addAttribute("guest", guestForm);
+		return "guest/login";
+	}
+
+    @RequestMapping(value = "/initLogout", method = RequestMethod.GET)
+    public String logout(HttpSession session,GuestForm guest) {
+        session.invalidate();
+        return "guest/login";
+    }
 }
