@@ -2,408 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/util/FormUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/util/FormUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/form/GallerysForm.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/form/GallerysForm.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/util/SaveToJsonFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/util/SaveToJsonFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/arrowws.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/arrowws.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/big9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/big9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/blog-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/blog-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/blog-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/comment1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/content_img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/content_img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/form-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/form-loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_2-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_2-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_2-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_2-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_3-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_3-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_3-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_3-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_4-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_4-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_4-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_4-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_5-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_5-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_5-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_5-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_6-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_6-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_6-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_6-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/gall_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/gall_6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/lib/gson-2.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/magnifyer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/magnifyer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/menu-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/move-up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/news-letter-icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/next.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/p-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/p-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/p-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page1_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page1_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page1_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page1_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page2_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page2_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page2_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page2_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page3_img9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page3_img9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page4_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page4_img1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/page4_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/page4_img2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/preloader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/preloader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/prev.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/s-6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/slide1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/slide2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/slide3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/images/slide4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/images/slider.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/slider.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GallerysForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/mail/MailHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/mail/MailHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/PIE.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/PIE.htc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/PIE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/PIE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/goods/util/SaveToJsonFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/TMForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/TMForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/blog.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/blog.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/cart/cartEnd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/cart/cartEnd.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/cart/cartList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/cart/cartList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/contact-form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/contact-form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/contact-form.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/contact-form.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/contacts.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/contacts.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/countdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/countdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/countdown.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/countdown.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/detail.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/detail.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/device.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/device.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/js/easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/etalage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/etalage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/flexslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/flexslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/footer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/footer.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/gallery.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/gallery.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/manager/goodsEdit.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/bg/goodsUpload.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/bg/goodsUpload.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/header.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/ie.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/include.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/include.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/john.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery-migrate-1.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery-migrate-1.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/jquery-ui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery-ui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/jquery.autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/jquery.autocomplete.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/jquery.countdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/jquery.countdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.countdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.countdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/js/jquery.easing.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.easydropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.easydropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.equalheights.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.equalheights.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.etalage.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.etalage.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.flexisel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.flexisel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.flexslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.flexslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.mobilemenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.mobilemenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.mousewheel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.mousewheel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/js/jquery.openCarousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.plugin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.shuffle-images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.shuffle-images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.simplr.smoothscroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.simplr.smoothscroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/jquery.ui.totop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.ui.totop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/mail/libmail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/mail/libmail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/guest/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/guest/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/megamenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/megamenu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/megamenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/megamenu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/mixins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/mixins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/js/move-top.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/mail/recaptchalib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/mail/recaptchalib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/guest/register.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/guest/register.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/responsiveslides.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/responsiveslides.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/script1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/script1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/stuck.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/stuck.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/stuck.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/stuck.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jspbak/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/style.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/style.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/style1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/style1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/superfish.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/superfish.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/superfish.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/superfish.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/superfish.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/superfish.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/tmStickUp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/tmStickUp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/touchTouch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/touchTouch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/touchTouch.jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/touchTouch.jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/variables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/variables.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/include.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/include.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/manager/goodsEdit.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/manager/goodsEdit.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/bg.jpg" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/bg.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/blog-1.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/blog-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/blog-2.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/blog-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/blog-3.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/blog-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/comment1.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/comment1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/logo.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/menu-icon.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/menu-icon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/move-up.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/move-up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/news-letter-icons.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/news-letter-icons.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/next.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/next.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/p-1.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/p-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/p-2.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/p-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/p-3.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/p-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/prev.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/prev.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-1.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-2.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-3.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-4.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-5.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/s-6.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/s-6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/slide1.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/slide1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/slide2.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/slide2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/slide3.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/slide3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/images/slide4.png" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/images/slide4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/js/easing.js" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/js/easing.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/js/jquery.easing.min.js" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/js/jquery.easing.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/js/jquery.min.js" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/js/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/js/jquery.openCarousel.js" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/js/jquery.openCarousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/js/move-top.js" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/js/move-top.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/include.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/include.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/form/CartForm.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/form/CartForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/form/CartForm.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/form/CartForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/service/CartService.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/service/CartService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/service/CartService.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/service/CartService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/manager/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/manager/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/manager/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/manager/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/form/GoodsForm.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/form/GoodsForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/form/GoodsForm.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/form/GoodsForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/service/GoodsService.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/service/GoodsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/service/GoodsService.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/service/GoodsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/controller/GuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/controller/GuestController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/controller/GuestController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/form/GuestForm.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/form/GuestForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/form/GuestForm.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/form/GuestForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/service/GuestService.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/service/GuestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/service/GuestService.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/service/GuestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/Test.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/Test.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/web/form/UVO.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/web/form/UVO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/web/form/UVO.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/web/form/UVO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/form/CartForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/form/CartForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/service/CartService.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/service/CartService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/CartSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/CartSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/CartSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/CartSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CartSqlMap.xml" afterPath="$PROJECT_DIR$/src/CartSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/manager/goods/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/cn/spring/manager/goods/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/guest/controller/GuestController.java" afterPath="$PROJECT_DIR$/src/cn/spring/guest/controller/GuestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/guest/form/GuestForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/guest/form/GuestForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/guest/service/GuestService.java" afterPath="$PROJECT_DIR$/src/cn/spring/guest/service/GuestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GuestSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GuestSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GuestSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GuestSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GuestSqlMap.xml" afterPath="$PROJECT_DIR$/src/GuestSqlMap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/controller/Test.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/controller/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/web/form/UVO.java" afterPath="$PROJECT_DIR$/src/cn/spring/web/form/UVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/css/bootstrap.css" afterPath="$PROJECT_DIR$/WebContent/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/bootstrap.css" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartEnd.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartEnd.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/META-INF/context.xml" afterPath="$PROJECT_DIR$/WebContent/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/META-INF/context.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/META-INF/context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/detail.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/detail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/guest/login.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/guest/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/guest/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/guest/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-mvc-example-error.iml" afterPath="$PROJECT_DIR$/spring-mvc-example-error.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_example_error_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_mvc_example_error_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/css/style.css" afterPath="$PROJECT_DIR$/WebContent/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/style.css" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spring-mvc-example-error.iws" />
@@ -515,8 +114,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state>
-              <first_editor vertical-scroll-proportion="1.6742424">
-                <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+              <first_editor vertical-scroll-proportion="0.7">
+                <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -672,8 +271,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="642" />
-    <option name="y" value="68" />
+    <option name="x" value="489" />
+    <option name="y" value="90" />
     <option name="width" value="1176" />
     <option name="height" value="704" />
   </component>
@@ -2102,12 +1701,12 @@
       <workItem from="1449796657323" duration="539000" />
       <workItem from="1449798580315" duration="7102000" />
       <workItem from="1449806135666" duration="2790000" />
-      <workItem from="1449810093706" duration="715000" />
+      <workItem from="1449810093706" duration="1727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243656000" />
+    <option name="totallyTimeSpent" value="244668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2119,7 +1718,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="642" y="68" width="1176" height="704" extended-state="0" />
+    <frame x="489" y="90" width="1176" height="704" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2133,13 +1732,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.548552" sideWeight="0.6647588" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7175844" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5079929" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294849" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42362344" sideWeight="0.6912752" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3048181" sideWeight="0.21777777" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.027531084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18206039" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938676" sideWeight="0.49" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2629,8 +2228,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state>
-          <first_editor vertical-scroll-proportion="1.6742424">
-            <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <first_editor vertical-scroll-proportion="0.7">
+            <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
