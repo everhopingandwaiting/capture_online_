@@ -4,14 +4,9 @@
     <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/service/GoodsService.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/service/GoodsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/service/GoodsService.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/service/GoodsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spring-mvc-example-error.iws" />
@@ -54,6 +49,33 @@
       <content type="file-editors">
         <state>
           <leaf>
+            <file leaf-file-name="GoodsSqlMap.xml" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/GoodsSqlMap.xml">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.5202312">
+                    <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+                    <folding>
+                      <marker date="1449909909305" expanded="true" signature="400:1843" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449909909305" expanded="true" signature="1990:2126" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449909909305" expanded="true" signature="2276:3734" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449909909305" expanded="true" signature="3878:3990" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449909909305" expanded="true" signature="4084:4195" placeholder="INSERT INTO ..." />
+                      <marker date="1449909909305" expanded="true" signature="4195:4287" placeholder="#category#, ..." />
+                      <marker date="1449909909305" expanded="true" signature="4390:5603" placeholder="UPDATE goods..." />
+                      <marker date="1449909909305" expanded="true" signature="5193:5206" placeholder="#information..." />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
             <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp">
                 <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +102,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,47 +112,35 @@
       <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50174826">
-              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.49717513">
+              <caret line="96" column="69" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="capture_online.goods_tab" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/a19eccb6/7edbbf92-a05c-495a-bc73-473581c4b522/capture_online..goods_tab">
+          <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="78" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="78" />
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java">
+      <file leaf-file-name="GoodsForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodsSqlMap.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GoodsSqlMap.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding>
-                <marker date="1449893191374" expanded="true" signature="361:1771" placeholder="SELECT id, c..goods_tab..." />
-                <marker date="1449893191374" expanded="true" signature="1918:2054" placeholder="SELECT id, c..goods_tab..." />
-                <marker date="1449893191374" expanded="true" signature="2204:3629" placeholder="SELECT id, c..goods_tab..." />
-                <marker date="1449893191374" expanded="true" signature="3773:3885" placeholder="SELECT id, c..goods_tab..." />
-                <marker date="1449893191374" expanded="true" signature="3979:4090" placeholder="INSERT INTO ..." />
-                <marker date="1449893191374" expanded="true" signature="4090:4182" placeholder="#category#, ..." />
-                <marker date="1449893191374" expanded="true" signature="4285:5498" placeholder="UPDATE goods..." />
-                <marker date="1449893191374" expanded="true" signature="5088:5101" placeholder="#information..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,6 +159,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
@@ -175,7 +190,6 @@
         <option value="$PROJECT_DIR$/WebContent/tmpTemplate/login.jsp" />
         <option value="$PROJECT_DIR$/WebContent/tmpTemplate/index.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jspbak/cart/cartEnd.jsp" />
-        <option value="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/footer.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/header.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/blog.jsp" />
@@ -212,9 +226,10 @@
         <option value="$PROJECT_DIR$/WebContent/js/jquery.js" />
         <option value="$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp" />
-        <option value="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
-        <option value="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
         <option value="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
+        <option value="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
+        <option value="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
       </list>
     </option>
   </component>
@@ -244,7 +259,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="459" />
-    <option name="y" value="53" />
+    <option name="y" value="300" />
     <option name="width" value="1538" />
     <option name="height" value="847" />
   </component>
@@ -826,6 +841,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lombok-1.16.6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-mvc-example-error" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lombok-1.16.6.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lombok" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -1166,6 +1235,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Unknown" factoryName="Unknown">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -1370,7 +1442,7 @@
       <workItem from="1449820005982" duration="4918000" />
       <workItem from="1449887144353" duration="1931000" />
       <workItem from="1449889341802" duration="1571000" />
-      <workItem from="1449890930908" duration="3086000" />
+      <workItem from="1449890930908" duration="14329000" />
     </task>
     <task id="LOCAL-00001" summary="动态搜索 ok">
       <created>1449893831264</created>
@@ -1378,11 +1450,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449893831264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="重构 搜索 conttoller">
+      <created>1449894305527</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1449894305527</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261263000" />
+    <option name="totallyTimeSpent" value="272506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1394,7 +1472,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="459" y="53" width="1538" height="847" extended-state="0" />
+    <frame x="459" y="300" width="1538" height="847" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1402,11 +1480,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4090909" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14914773" sideWeight="0.3420699" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4588068" sideWeight="0.2547043" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42319277" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4667697" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14914773" sideWeight="0.65793014" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4375" sideWeight="0.65793014" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.037993923" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1415,12 +1493,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18346775" sideWeight="0.6912752" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3048181" sideWeight="0.21777777" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02560241" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938676" sideWeight="0.49" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29453263" sideWeight="0.30872482" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2627841" sideWeight="0.4173387" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4588068" sideWeight="0.7452957" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1482,7 +1560,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="动态搜索 ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="动态搜索 ok" />
+    <MESSAGE value="重构 搜索 conttoller" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构 搜索 conttoller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1499,11 +1578,53 @@
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="53" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1516,20 +1637,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/spring/guest/service/GuestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/blog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3136456">
-          <caret line="72" column="63" selection-start-line="72" selection-start-column="63" selection-end-line="72" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/spring/cart/service/CartService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7669903">
@@ -1587,13 +1694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.108991824">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/jackdev8/LinuxFilesPartition/jdk1.8.0_66/src.zip!/java/lang/reflect/InvocationTargetException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1608,13 +1708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35416666">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35416666">
@@ -1626,13 +1719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35416666">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-tx-4.1.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35416666">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1666,13 +1752,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.076923">
-          <caret line="421" column="0" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1757,7 +1836,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1797,18 +1878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/a19eccb6/7edbbf92-a05c-495a-bc73-473581c4b522/capture_online..goods_tab">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state>
@@ -1841,18 +1910,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/javax.servlet1.jar!/javax/servlet/http/HttpServletRequest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35555556">
           <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35384616">
+          <caret line="461" column="0" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-aop-4.1.5.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35384616">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-tx-4.1.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-web-4.1.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-webmvc-4.1.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.525641">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1864,44 +1965,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java">
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-core-4.1.5.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3076925">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2062147">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a19eccb6/7edbbf92-a05c-495a-bc73-473581c4b522/capture_online..goods_tab">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="78" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="78" />
+        <state vertical-scroll-proportion="-0.17514125">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49717513">
+          <caret line="96" column="69" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GoodsSqlMap.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.5202312">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
           <folding>
-            <marker date="1449893191374" expanded="true" signature="361:1771" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449893191374" expanded="true" signature="1918:2054" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449893191374" expanded="true" signature="2204:3629" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449893191374" expanded="true" signature="3773:3885" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449893191374" expanded="true" signature="3979:4090" placeholder="INSERT INTO ..." />
-            <marker date="1449893191374" expanded="true" signature="4090:4182" placeholder="#category#, ..." />
-            <marker date="1449893191374" expanded="true" signature="4285:5498" placeholder="UPDATE goods..." />
-            <marker date="1449893191374" expanded="true" signature="5088:5101" placeholder="#information..." />
+            <marker date="1449909909305" expanded="true" signature="400:1843" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449909909305" expanded="true" signature="1990:2126" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449909909305" expanded="true" signature="2276:3734" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449909909305" expanded="true" signature="3878:3990" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449909909305" expanded="true" signature="4084:4195" placeholder="INSERT INTO ..." />
+            <marker date="1449909909305" expanded="true" signature="4195:4287" placeholder="#category#, ..." />
+            <marker date="1449909909305" expanded="true" signature="4390:5603" placeholder="UPDATE goods..." />
+            <marker date="1449909909305" expanded="true" signature="5193:5206" placeholder="#information..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50174826">
-          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>

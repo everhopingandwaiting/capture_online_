@@ -2,41 +2,43 @@
 <!DOCTYPE sqlMap
             PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
             "http://ibatis.apache.org/dtd/sql-map-2.dtd">
-<!-- SqlMap定義 -->
+
+<!-- TODO 使用<sql id="">,<include refid="">  重构 sql -->
+
 <sqlMap namespace="Goods">
 	<select id="searchGoodsList"  parameterClass="cn.spring.goods.form.GoodsForm"
             resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
         <dynamic prepend="WHERE">
-            <isNotEmpty prepend="OR" property="category">
+            <isNotEmpty prepend="AND" property="category">
                 category  LIKE '%$category$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="date">
+            <isNotEmpty prepend="AND" property="date">
                 date  LIKE  '%$date$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="name">
+            <isNotEmpty prepend="AND" property="name">
                 name  LIKE  '%$name$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="tag">
+            <isNotEmpty prepend="AND" property="tag">
                 tag  LIKE '%$tag$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="comment">
+            <isNotEmpty prepend="AND" property="comment">
                 comment  LIKE '%$comment$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="view">
+            <isGreaterThan compareValue="0" prepend="AND" property="view">
                 view  LIKE  '%$view$%'
-            </isNotEmpty>
-            <isNotEmpty prepend="OR" property="information">
+            </isGreaterThan>
+            <isNotEmpty prepend="AND" property="information">
                 information  LIKE  '%$information$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="picture">
+            <isNotEmpty prepend="AND" property="picture">
                 picture  LIKE  '%$picture$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="type">
+            <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="price">
+            <isNotEmpty prepend="AND" property="price">
                 price  LIKE  '%$price$%'
             </isNotEmpty>
         </dynamic>
@@ -53,34 +55,34 @@
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
         <dynamic prepend="WHERE">
-            <isNotEmpty prepend="OR" property="category">
+            <isNotEmpty prepend="AND" property="category">
                 category  LIKE '%$category$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="date">
+            <isNotEmpty prepend="AND" property="date">
                 date  LIKE  '%$date$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="name">
+            <isNotEmpty prepend="AND" property="name">
                 name  LIKE  '%$name$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="tag">
+            <isNotEmpty prepend="AND" property="tag">
                 tag  LIKE '%$tag$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="comment">
+            <isNotEmpty prepend="AND" property="comment">
                 comment  LIKE '%$comment$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="view">
+            <isGreaterThan compareValue="0" prepend="AND" property="view">
                 view  LIKE  '%$view$%'
-            </isNotEmpty>
-            <isNotEmpty prepend="OR" property="information">
+            </isGreaterThan>
+            <isNotEmpty prepend="AND" property="information">
                 information  LIKE  '%$information$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="picture">
+            <isNotEmpty prepend="AND" property="picture">
                 picture  LIKE  '%$picture$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="type">
+            <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="OR" property="price">
+            <isNotEmpty prepend="AND" property="price">
                 price  LIKE  '%$price$%'
             </isNotEmpty>
         </dynamic>

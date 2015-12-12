@@ -3,7 +3,6 @@ package cn.spring.goods.form;
 import lombok.Data;
 
 import java.sql.Timestamp;
-import java.util.Date;
 @Data
 public class GoodsForm {
 

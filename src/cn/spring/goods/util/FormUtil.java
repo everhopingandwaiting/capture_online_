@@ -35,7 +35,7 @@ public class FormUtil {
         } else {
             for (int i = 0; i < 6; i++) {
                 List<GoodsForm> sublist = new ArrayList<>();
-                if (listGallery.get(i) == null) {
+                if (listGallery.size()-1<i) {
                     GoodsForm form = new GoodsForm();
                     sublist.add(form);
                 } else {
