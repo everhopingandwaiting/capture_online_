@@ -19,8 +19,8 @@ public class GoodsService {
 	@Autowired
 	UpdateDAO updateDao;
 	
-	public List<GoodsForm> searchGoodsList() {
-		return queryDao.executeForObjectList("Goods.searchGoodsList", null);
+	public List<GoodsForm> searchGoodsList(GoodsForm goodsForm) {
+		return queryDao.executeForObjectList("Goods.searchGoodsList", goodsForm);
 	}
 	
 	public List<GoodsForm> searchConditionGoodsList(GoodsForm frm) {

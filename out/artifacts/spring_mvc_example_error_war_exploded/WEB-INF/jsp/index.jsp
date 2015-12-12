@@ -32,11 +32,10 @@
        });
     });
  function changeURL(x) {
-     alert(x);
-     var a = document.getElementsByName("gridID");
+
+     var a = document.getElementById("gridID");
      for( var i=0;i< a.size;i++) {
-         a[i].href = "galleryDetail?goodsId="+ x;
-         alert(a[i]);
+         a[i].href = "galleryDetail?goodsId="+ x.name;
      }
 
  }
@@ -88,7 +87,7 @@
                 <div class="images">
 
                   <c:forEach items="${grid1}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL(23)"/>
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL(this)"/>
 
                   </c:forEach>
 
@@ -100,7 +99,7 @@
                 <div class="images">
 
                   <c:forEach items="${grid2}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL()">
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onmousemove="changeURL(this)">
 
 
                   </c:forEach>

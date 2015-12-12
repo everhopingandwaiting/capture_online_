@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="../../../css/style.css">
 <%--    <link rel="stylesheet" href="../../../css/bootstrap.css.css">--%>
 
-    <script src="../../../js/jquery.js"></script>
+    <%--<script src="../../../js/jquery.js"></script>&lt;%&ndash;-%>--%>
+
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+
     <script src="../../../js/jquery-migrate-1.1.1.js"></script>
     <script src="../../../js/jquery.easing.1.3.js"></script>
     <script src="../../../js/script.js"></script>
@@ -25,6 +28,7 @@
     <script src="../../../js/jquery-ui.js"></script>
     <link rel="stylesheet" href="../../../css/jquery-ui.css"/>
   <script src="../../../js/jquery.autocomplete.js"></script>
+    <script  src="../../../js/jquery.plugin.js"></script>
 
     <script type="text/javascript">
 
@@ -137,7 +141,8 @@ $("#searchValue").autocomplete({
             "Scala",
             "Scheme"
         ];
-        $( "#searchValue" ).autocomplete({
+        console.log($("#searchValue"));
+        $("#searchValue").autocomplete(function(){
             source: availableTags
         });
     });
@@ -151,6 +156,7 @@ $("#searchValue").autocomplete({
 
     */</script>
     <script type="text/javascript">/*
+
 
             var data = "Core Selectors Attributes Traversing Manipulation CSS Events Effects Ajax Utilities".split(" ");
             $("#searchValue").autocomplete(data);

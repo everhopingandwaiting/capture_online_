@@ -4,9 +4,43 @@
             "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 <!-- SqlMap定義 -->
 <sqlMap namespace="Goods">
-	<select id="searchGoodsList" resultClass="cn.spring.goods.form.GoodsForm">
+	<select id="searchGoodsList"  parameterClass="cn.spring.goods.form.GoodsForm"
+            resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="OR" property="category">
+                category  LIKE '%$category$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="date">
+                date  LIKE  '%$date$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="name">
+                name  LIKE  '%$name$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="tag">
+                tag  LIKE '%$tag$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="comment">
+                comment  LIKE '%$comment$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="view">
+                view  LIKE  '%$view$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="information">
+                information  LIKE  '%$information$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="picture">
+                picture  LIKE  '%$picture$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="type">
+                type  LIKE  '%$type$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="price">
+                price  LIKE  '%$price$%'
+            </isNotEmpty>
+        </dynamic>
+
 		ORDER BY view ASC
 	</select>
 	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
@@ -18,8 +52,40 @@
 	<select id="searchConditionGoodsListHot" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
-		WHERE type = #type#
-		ORDER BY view DESC  LIMIT #limit#
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="OR" property="category">
+                category  LIKE '%$category$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="date">
+                date  LIKE  '%$date$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="name">
+                name  LIKE  '%$name$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="tag">
+                tag  LIKE '%$tag$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="comment">
+                comment  LIKE '%$comment$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="view">
+                view  LIKE  '%$view$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="information">
+                information  LIKE  '%$information$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="picture">
+                picture  LIKE  '%$picture$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="type">
+                type  LIKE  '%$type$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="OR" property="price">
+                price  LIKE  '%$price$%'
+            </isNotEmpty>
+        </dynamic>
+
+        ORDER BY view DESC  LIMIT #limit#
 	</select>
 	<select id="searchGoodById" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type

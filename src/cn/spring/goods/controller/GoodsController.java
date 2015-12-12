@@ -22,17 +22,17 @@ import javax.servlet.http.HttpSession;
 @Controller("GoodsController")
 @RequestMapping("/")
 public class GoodsController {
-
-	@Autowired
+    public static  String parentPath;
+    @Autowired
 	GoodsService goodsService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model, GoodsForm goodsForm,HttpSession httpSession) {
         String path = httpSession.getServletContext().getRealPath("data");
         model = FormUtil.model(goodsForm, goodsService, model);
-        List<GoodsForm> goodsFormList = goodsService.searchGoodsList();
+        List<GoodsForm> goodsFormList = goodsService.searchGoodsList(goodsForm);
         SaveToJsonFile.save(path,goodsFormList);
-
+        parentPath = "index";
 
 
         return "index";
@@ -44,14 +44,16 @@ public class GoodsController {
 		if (goodsForm.getType() == null) {
             model = FormUtil.model(goodsForm, goodsService, model);
 			modelAndView.setViewName("index");
-		} else {
+            parentPath = "index";
+        } else {
 //			String type=new String(goodsForm.getType().getBytes("iso8859-1"),"utf-8");
 			String type = goodsForm.getType().toString();
 			System.out.println(type + "&&*&*(^*&%^&%^&$*&^*$^$^&");
 			goodsForm.setType(goodsForm.getType());
 			model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
 			modelAndView.setViewName(type);
-		}
+            parentPath = type;
+        }
 
 		return modelAndView;
 	}
@@ -83,13 +85,27 @@ public class GoodsController {
 	}
 
     @RequestMapping(value = "/GlobalSearch", method = RequestMethod.POST)
-    public ModelAndView showGlobalSearchForm(HttpSession httpSession,@RequestParam(value = "searchValue") String
-            value, Model
-            model,
-                                             GoodsForm
-            goodsForm) {
+    public ModelAndView showGlobalSearchForm(HttpServletRequest httpSession,@RequestParam(value = "searchValue") String value, Model model, GoodsForm goodsForm) {
         ModelAndView modelAndView = new ModelAndView();
-//        String path = httpSession.getServletContext();
+        goodsForm.setName(value);
+
+        switch (parentPath) {
+            case "index":
+                modelAndView.setViewName("index");
+                model = FormUtil.model(goodsForm, goodsService, model);
+
+                break;
+            case "blog":
+                goodsForm.setType("blog");
+                model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
+                modelAndView.setViewName("blog");
+                break;
+            case "gallery":
+                modelAndView.setViewName("gallery");
+                goodsForm.setType("gallery");
+                model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
+                break;
+        }
 
         return modelAndView;
     }
