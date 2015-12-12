@@ -50,7 +50,7 @@ public class GoodsController {
 			String type = goodsForm.getType().toString();
 			System.out.println(type + "&&*&*(^*&%^&%^&$*&^*$^$^&");
 			goodsForm.setType(goodsForm.getType());
-			model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
+			model.addAttribute("listGoods", goodsService.searchGoodsList(goodsForm));
 			modelAndView.setViewName(type);
             parentPath = type;
         }

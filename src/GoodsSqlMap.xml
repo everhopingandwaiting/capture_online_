@@ -6,16 +6,83 @@
 <!-- TODO 使用<sql id="">,<include refid="">  重构 sql -->
 
 <sqlMap namespace="Goods">
+
+    <sql id="queryCondition">
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="category">
+                category  LIKE '%$category$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="date">
+                date  LIKE  '%$date$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="name">
+                name  LIKE  '%$name$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="tag">
+                tag  LIKE '%$tag$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="comment">
+                comment  LIKE '%$comment$%'
+            </isNotEmpty>
+            <isGreaterThan compareValue="0" prepend="AND" property="view">
+                view  LIKE  '%$view$%'
+            </isGreaterThan>
+            <isNotEmpty prepend="AND" property="information">
+                information  LIKE  '%$information$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="picture">
+                picture  LIKE  '%$picture$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="type">
+                type  LIKE  '%$type$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="price">
+                price  LIKE  '%$price$%'
+            </isNotEmpty>
+        </dynamic>
+    </sql>
+    <select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm"
+            resultClass="cn.spring.goods.form.GoodsForm">
+        SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+        FROM goods_tab
+        <dynamic prepend="WHERE">
+            <isNotEmpty prepend="AND" property="category">
+                category  LIKE '%$category$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="date">
+                date  LIKE  '%$date$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="name">
+                name  LIKE  '%$name$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="tag">
+                tag  LIKE '%$tag$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="comment">
+                comment  LIKE '%$comment$%'
+            </isNotEmpty>
+            <isGreaterThan compareValue="0" prepend="AND" property="view">
+                view  LIKE  '%$view$%'
+            </isGreaterThan>
+            <isNotEmpty prepend="AND" property="information">
+                information  LIKE  '%$information$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="picture">
+                picture  LIKE  '%$picture$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="type">
+                type  LIKE  '%$type$%'
+            </isNotEmpty>
+            <isNotEmpty prepend="AND" property="price">
+                price  LIKE  '%$price$%'
+            </isNotEmpty>
+        </dynamic>
+        ORDER BY type
+
+
+    </select>
 	<select id="searchGoodsList"  parameterClass="cn.spring.goods.form.GoodsForm"
             resultClass="cn.spring.goods.form.GoodsForm">
-	    <include refid="searchConditionGoodsList"/>
-		ORDER BY view ASC
-	</select>
-	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		/*SELECT id, category, date, name, tag, comment,view,information,picture,price,type
-		FROM goods_tab
-		WHERE type = #type#
-		ORDER BY type*/
         SELECT id, category, date, name, tag, comment,view,information,picture,price,type
         FROM goods_tab
         <dynamic prepend="WHERE">
@@ -51,6 +118,8 @@
             </isNotEmpty>
         </dynamic>
 	</select>
+
+
 	<select id="searchConditionGoodsListHot" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
