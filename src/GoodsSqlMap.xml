@@ -8,8 +8,16 @@
 <sqlMap namespace="Goods">
 	<select id="searchGoodsList"  parameterClass="cn.spring.goods.form.GoodsForm"
             resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+	    <include refid="searchConditionGoodsList"/>
+		ORDER BY view ASC
+	</select>
+	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
+		/*SELECT id, category, date, name, tag, comment,view,information,picture,price,type
 		FROM goods_tab
+		WHERE type = #type#
+		ORDER BY type*/
+        SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+        FROM goods_tab
         <dynamic prepend="WHERE">
             <isNotEmpty prepend="AND" property="category">
                 category  LIKE '%$category$%'
@@ -42,14 +50,6 @@
                 price  LIKE  '%$price$%'
             </isNotEmpty>
         </dynamic>
-
-		ORDER BY view ASC
-	</select>
-	<select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
-		FROM goods_tab
-		WHERE type = #type#
-		ORDER BY type
 	</select>
 	<select id="searchConditionGoodsListHot" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
 		SELECT id, category, date, name, tag, comment,view,information,picture,price,type

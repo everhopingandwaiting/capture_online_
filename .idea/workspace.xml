@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/util/FormUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/util/FormUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/util/FormUtil.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/util/FormUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spring-mvc-example-error.iws" />
@@ -52,17 +53,18 @@
             <file leaf-file-name="GoodsSqlMap.xml" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/GoodsSqlMap.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.5202312">
-                    <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+                  <state vertical-scroll-proportion="0.2384393">
+                    <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
                     <folding>
-                      <marker date="1449909909305" expanded="true" signature="400:1843" placeholder="SELECT id, c..goods_tab..." />
-                      <marker date="1449909909305" expanded="true" signature="1990:2126" placeholder="SELECT id, c..goods_tab..." />
-                      <marker date="1449909909305" expanded="true" signature="2276:3734" placeholder="SELECT id, c..goods_tab..." />
-                      <marker date="1449909909305" expanded="true" signature="3878:3990" placeholder="SELECT id, c..goods_tab..." />
-                      <marker date="1449909909305" expanded="true" signature="4084:4195" placeholder="INSERT INTO ..." />
-                      <marker date="1449909909305" expanded="true" signature="4195:4287" placeholder="#category#, ..." />
-                      <marker date="1449909909305" expanded="true" signature="4390:5603" placeholder="UPDATE goods..." />
-                      <marker date="1449909909305" expanded="true" signature="5193:5206" placeholder="#information..." />
+                      <marker date="1449910423367" expanded="true" signature="446:466" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449910423367" expanded="true" signature="613:753" placeholder="/*SELECT id,..." />
+                      <marker date="1449910423367" expanded="true" signature="615:751" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449910423367" expanded="true" signature="2340:3798" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449910423367" expanded="true" signature="3942:4054" placeholder="SELECT id, c..goods_tab..." />
+                      <marker date="1449910423367" expanded="true" signature="4148:4259" placeholder="INSERT INTO ..." />
+                      <marker date="1449910423367" expanded="true" signature="4259:4351" placeholder="#category#, ..." />
+                      <marker date="1449910423367" expanded="true" signature="4454:5667" placeholder="UPDATE goods..." />
+                      <marker date="1449910423367" expanded="true" signature="5257:5270" placeholder="#information..." />
                     </folding>
                   </state>
                 </provider>
@@ -1442,7 +1444,7 @@
       <workItem from="1449820005982" duration="4918000" />
       <workItem from="1449887144353" duration="1931000" />
       <workItem from="1449889341802" duration="1571000" />
-      <workItem from="1449890930908" duration="14329000" />
+      <workItem from="1449890930908" duration="14843000" />
     </task>
     <task id="LOCAL-00001" summary="动态搜索 ok">
       <created>1449893831264</created>
@@ -1456,11 +1458,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449894305527</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修复 GoodsSqlMap.sql  some bug">
+      <created>1449909950473</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1449909950473</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272506000" />
+    <option name="totallyTimeSpent" value="273020000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1561,7 +1569,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="动态搜索 ok" />
     <MESSAGE value="重构 搜索 conttoller" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构 搜索 conttoller" />
+    <MESSAGE value="修复 GoodsSqlMap.sql  some bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复 GoodsSqlMap.sql  some bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2022,17 +2031,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GoodsSqlMap.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5202312">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.2384393">
+          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
           <folding>
-            <marker date="1449909909305" expanded="true" signature="400:1843" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449909909305" expanded="true" signature="1990:2126" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449909909305" expanded="true" signature="2276:3734" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449909909305" expanded="true" signature="3878:3990" placeholder="SELECT id, c..goods_tab..." />
-            <marker date="1449909909305" expanded="true" signature="4084:4195" placeholder="INSERT INTO ..." />
-            <marker date="1449909909305" expanded="true" signature="4195:4287" placeholder="#category#, ..." />
-            <marker date="1449909909305" expanded="true" signature="4390:5603" placeholder="UPDATE goods..." />
-            <marker date="1449909909305" expanded="true" signature="5193:5206" placeholder="#information..." />
+            <marker date="1449910423367" expanded="true" signature="446:466" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449910423367" expanded="true" signature="613:753" placeholder="/*SELECT id,..." />
+            <marker date="1449910423367" expanded="true" signature="615:751" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449910423367" expanded="true" signature="2340:3798" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449910423367" expanded="true" signature="3942:4054" placeholder="SELECT id, c..goods_tab..." />
+            <marker date="1449910423367" expanded="true" signature="4148:4259" placeholder="INSERT INTO ..." />
+            <marker date="1449910423367" expanded="true" signature="4259:4351" placeholder="#category#, ..." />
+            <marker date="1449910423367" expanded="true" signature="4454:5667" placeholder="UPDATE goods..." />
+            <marker date="1449910423367" expanded="true" signature="5257:5270" placeholder="#information..." />
           </folding>
         </state>
       </provider>
