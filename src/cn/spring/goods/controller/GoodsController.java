@@ -88,8 +88,15 @@ public class GoodsController {
     public ModelAndView showGlobalSearchForm(HttpServletRequest httpSession,@RequestParam(value = "searchValue") String value, Model model, GoodsForm goodsForm) {
         ModelAndView modelAndView = new ModelAndView();
         goodsForm.setName(value);
+        modelAndView.setViewName(parentPath);
+        if (parentPath.equals("index")) {
+            model = FormUtil.model(goodsForm, goodsService, model);
+        } else {
+            goodsForm.setType(parentPath);
 
-        switch (parentPath) {
+            model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
+        }
+ /*       switch (parentPath) {
             case "index":
                 modelAndView.setViewName("index");
                 model = FormUtil.model(goodsForm, goodsService, model);
@@ -105,7 +112,9 @@ public class GoodsController {
                 goodsForm.setType("gallery");
                 model.addAttribute("listGoods", goodsService.searchConditionGoodsList(goodsForm));
                 break;
-        }
+        }*/
+
+
 
         return modelAndView;
     }
