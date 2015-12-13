@@ -27,8 +27,9 @@
                             PAID AMOUNT : <input id="amount" type="text"  readonly="readonly"  placeholder="PAID AMOUNT :"
                                                  value="${order.amount}"/>
                         </label>
-
+                     <input hidden="hidden" id="order_no" value="${order.uuid}" type="text"/>
                         <div class="ch">
+                            <span class="up" id="pay">一键支付</span>
                             <span class="up" onclick="app_pay('wx')">微 信</span>
                             <span class="up" onclick="app_pay('alipay')">支付宝</span>
                             <span class="up" onclick="app_pay('upacp')">银联(upacp)</span>
@@ -45,12 +46,86 @@
         </div>
     </section>
 
-<script src="../../../js/pingpp.js" type="text/javascript"></script>
+    <jsp:include page="../common/footer.jsp"></jsp:include>
+
+    <script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>
+    <script type="text/javascript">
+//        var  order_no=document.getElementById("order_no").va
+var order_no = $("#order_no").val();
+        document.addEventListener('pingpp_one_ready',function(){
+            document.getElementById('pay').addEventListener('click',function(){
+                pingpp_one.init({
+                    app_id:'app_OuzfnLX9y9e5rjzX',
+                    order_no:order_no,
+                    amount:$('#amount').val(),                                   //订单价格，单位：人民币 分
+                    // 壹收款页面上需要展示的渠道，数组，数组顺序即页面展示出的渠道的顺序
+                    // upmp_wap 渠道在微信内部无法使用，若用户未安装银联手机支付控件，则无法调起支付
+                    channel:['alipay_wap','wx_pub','upacp_wap','yeepay_wap','jdpay_wap','bfb_wap'],
+                    charge_url:'http://10.0.44.62:8080/account',  //商户服务端创建订单的 url
+                    charge_param:{a:john,b:SUSE},
+                    //(可选，用户自定义参数，若存在自定义参数则壹收款会通过 POST 方法透传给 charge_url)
+//                    open_id:'wx1234567890',                      //(可选，使用微信公众号支付时必须传入)
+                    debug:true                                   //(可选，debug 模式下会将 charge_url 的返回结果透传回来)
+                },function(res){
+                    //debug 模式下获取 charge_url 的返回结果
+                    if(res.debug&&res.chargeUrlOutput){
+                        console.log(res.chargeUrlOutput);
+                    }
+                    if(!res.status){
+                        //处理错误
+                        alert(res.msg);
+                    }
+                    else{
+                        //debug 模式下调用 charge_url 后会暂停，可以调用 pingpp_one.resume 方法继续执行
+                        if(res.debug&&!res.wxSuccess){
+                            if(confirm('是否继续支付？')){
+                                pingpp_one.resume();
+                            }
+                        }
+                        //若微信公众号渠道需要使用壹收款的支付成功页面，则在这里进行成功回调，
+                        //调用 pingpp_one.success 方法，你也可以自己定义回调函数
+                        //其他渠道的处理方法请见第 2 节
+                        else pingpp_one.success(function(res){
+                            if(!res.status){
+                                alert(res.msg);
+                            }
+                        },function(){
+                            //这里处理支付成功页面点击“继续购物”按钮触发的方法，
+                            //例如：若你需要点击“继续购物”按钮跳转到你的购买页，
+                            //则在该方法内写入 window.location.href = "你的购买页面 url"
+                            window.location.href='http://10.0.44.62:8080/cart/cartEnd';//示例
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        var script=document.createElement('script');
+        script.type='text/javascript';
+        script.src='https://one.pingxx.com/lib/pingpp_one.js';
+        script.onload=function(){
+            document.addEventListener('pingpp_one_ready',function(e){
+                pingpp_one.success(function(res){
+                    if(!res.status){
+                        alert(res.msg);
+                    }
+                },function(){
+                    window.location.href="http://10.0.44.62:8080/";   //示例
+                });
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+
+
+    <%--<script src="../../../js/pingpp.js" type="text/javascript"></script>
 <script>
     function wap_pay(channel) {
         var amount = document.getElementById('amount').value * 100;
 
-        var pay_url = "http://10.0.44.62:8080/account";
+        var pay_url = "http://localhost:8080/account";
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", pay_url, true);
@@ -80,6 +155,6 @@
             PINGPP_ANDROID_SDK.callPay(channel, amount);
         }
     }
-</script>
+</script>--%>
 </body>
 </html>
