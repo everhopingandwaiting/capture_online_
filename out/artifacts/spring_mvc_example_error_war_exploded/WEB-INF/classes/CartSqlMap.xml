@@ -5,13 +5,15 @@
 <!-- SqlMap定義 -->
 <sqlMap namespace="Cart">
 	<insert id="addCart" parameterClass="cn.spring.cart.form.CartForm">
-		INSERT INTO cart_tab(uuid, goods_id, guest_id,date) values(#goodsUUID#, #goodsId#, #guestId#,#goodsDate#)
+		INSERT INTO cart_tab(uuid, goods_id, guest_id,date,status) values(#goodsUUID#, #goodsId#, #guestId#,
+		#goodsDate#,#status#)
 	</insert>
 	<select id="searchCart" parameterClass="cn.spring.cart.form.CartForm" resultClass="java.lang.Integer">
 		SELECT count(0)
 		FROM cart_tab
-		WHERE goods_id=#goodsId#
+		WHERE goods_id=#goodsId# 
 		AND guest_id=#guestId#
+        AND  status=#status#
 	</select>
 	<select id="searchConditionCartList" parameterClass="cn.spring.cart.form.CartForm" resultClass="cn.spring.cart.form.CartForm">
 		SELECT
@@ -27,6 +29,7 @@
 		FROM cart_tab a, goods_tab b
 		WHERE a.goods_id=b.id
 		AND a.guest_id=#guestId#
+        AND  a.status=#status#
 	</select>
 	<delete id="delCart" parameterClass="cn.spring.cart.form.CartForm">
 		DELETE FROM cart_tab
@@ -42,9 +45,19 @@
             #[]#
         </iterate>
     </delete>
-
+   <update id="CartStatusUpdate" parameterClass="java.util.List">
+       UPDATE cart_tab SET  status='YES'
+       where id in
+       <iterate conjunction="," open="(" close=")" >
+           #[]#
+       </iterate>
+   </update>
 	<delete id="account" parameterClass="cn.spring.cart.form.CartForm">
 		DELETE FROM cart_tab
 		WHERE guest_id=#guestId#
 	</delete>
+    <insert id="CartToOrder" parameterClass="cn.spring.cart.form.OrderForm" >
+        INSERT INTO  order_tab( guest_id, amount, uuid, order_date) VALUES
+            (#guest_id#, #amount#, #uuid#, #order_date#)
+    </insert>
 </sqlMap>

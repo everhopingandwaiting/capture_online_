@@ -13,6 +13,7 @@
       <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="uuid" sqlType="VARCHAR" precision="80" scale="0" nullable="false" jdbcType="12"/>
       <column name="goods_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="gallery_tab" schema="" catalog="capture_online" type="TABLE">
@@ -46,6 +47,16 @@
       <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <column name="role" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="name_UNIQUE" unique="true" columns="name"/>
+    </table>
+    <table name="order_tab" schema="" catalog="capture_online" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="guest_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="uuid" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="order_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>

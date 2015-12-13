@@ -61,7 +61,7 @@
 <!--=====================
           Content
 ======================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - August11, 2015!</div>
+<section id="content"><div class="ic"></div>
   <div class="container">
     <div class="row">
       <div class="grid_12">

@@ -26,6 +26,7 @@ public class Order {
         this.currency = "cny";
         this.subject = "owner  by  john";
         this.body = "hava  fun  with  shopping ";
+        this.channel = "alipay";
     }
 
     public Map<String, Object> getOrderMap() {

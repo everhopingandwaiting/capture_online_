@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import cn.spring.cart.form.OrderForm;
 import jp.terasoluna.fw.dao.QueryDAO;
 import jp.terasoluna.fw.dao.UpdateDAO;
 
@@ -47,5 +48,13 @@ public class CartService {
     public Integer deleteSelected(int[] ids) {
         List<Integer> list1= IntStream.of(ids).boxed().collect(Collectors.toList());
         return updateDao.execute("Cart.DelSelected", list1);
+    }
+
+    public Integer CartToOrder(OrderForm cartForm) {
+        return updateDao.execute("Cart.CartToOrder", cartForm);
+    }
+
+    public Integer CartStatusUpdate(List list) {
+        return updateDao.execute("Cart.CartStatusUpdate", list);
     }
 }

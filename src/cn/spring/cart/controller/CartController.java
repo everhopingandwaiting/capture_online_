@@ -1,9 +1,15 @@
 package cn.spring.cart.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import cn.spring.cart.form.OrderForm;
 import cn.spring.goods.form.GoodsForm;
 import cn.spring.goods.util.FormUtil;
+import cn.spring.pay.entity.ApiKey;
+import cn.spring.pay.entity.Order;
+import cn.spring.pay.trade.ChargeOrder;
+import com.pingplusplus.model.Charge;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +26,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Controller("CartController")
 @RequestMapping("/")
 public class CartController {
-
-	@Autowired
+    private Order order;
+    @Autowired
 	CartService cartService;
 	
 	@Autowired
@@ -38,7 +46,7 @@ public class CartController {
 //		log.info("加入购物车");
 		UVO uvo = (UVO)session.getAttribute("UVO");
 		if (uvo != null) {
-			cartForm.setGoodsUUID(UUID.randomUUID().toString().substring(1, 20));
+			cartForm.setGoodsUUID(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
 			cartForm.setGoodsDate(new Timestamp(new Date().getTime()));
 			cartForm.setGuestId(uvo.getUserId());
 //			String id =  String.valueOf(System.currentTimeMillis());
@@ -54,7 +62,7 @@ public class CartController {
 	@RequestMapping(value = "/initCart", method = RequestMethod.GET)
 	public String initCart(Model model, CartForm cartForm, HttpSession session) {
 //		log.info("初始化购物车");
-		UVO uvo = (UVO)session.getAttribute("UVO");
+        UVO uvo = (UVO)session.getAttribute("UVO");
 		if (uvo != null) {
 
 			cartForm.setGuestId(uvo.getUserId());
@@ -81,7 +89,9 @@ public class CartController {
     @RequestMapping(value = "/deleteSelected", params = "deleteIDS",method = RequestMethod.GET)
     public String deleteSelected(@RequestParam("id") int []ids ,Model model, CartForm cartForm, HttpSession session) {
 		log.info("从购物车删除");
-        cartService.deleteSelected(ids);
+        if (ids.length > 0) {
+            cartService.deleteSelected(ids);
+        }
         UVO uvo = (UVO)session.getAttribute("UVO");
         if (uvo != null) {
             cartForm.setGuestId(uvo.getUserId());
@@ -93,10 +103,51 @@ public class CartController {
     }
 	
 	@RequestMapping(value = "/account", method = RequestMethod.GET)
-	public String account(Model model, CartForm cartForm) {
-//		log.info("从购物车删除，结算");
-		cartService.account(cartForm);
-			
-		return "cart/cartEnd";
-	}
+	public String account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
+		log.info("从购物车--> OrderForm ，结算");
+        UVO uvo = (UVO)session.getAttribute("UVO");
+        OrderForm orderForm = new OrderForm();
+        orderForm.setGuest_id(uvo.getUserId());
+        cartForm.setGuestId(uvo.getUserId());
+          List<CartForm> cartForms= cartService.searchConditionCartList(cartForm);
+        orderForm.setAmount(cartForms.stream().mapToInt
+                (CartForm::getGoodsPrice).sum());
+        orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
+        orderForm.setOrder_date(new Timestamp(new Date().getTime()));
+        cartService.CartToOrder(orderForm);
+        model.addAttribute("order", orderForm);
+//        return "cart/cartEnd";
+        //
+//        start  request  server  ping++
+        order = new Order();
+        order.setAmount(orderForm.getAmount());
+        order.setOrder_no(orderForm.getUuid());
+        order.setClient_ip(getRemoteHost(request));
+        ChargeOrder chargeOrder = new ChargeOrder();
+       log.info("----start charge ");
+           Charge charge= chargeOrder.charge(order, new ApiKey());
+        log.info("search charge ");
+        chargeOrder.retrieve(charge.getId());
+        log.info("list charge");
+        chargeOrder.all();
+        cartService.CartStatusUpdate(cartForms.stream()
+                .mapToInt(CartForm::getId)
+                .boxed()
+                .collect(Collectors.toList()));
+        return "pay/webview";
+    }
+
+    public String getRemoteHost(javax.servlet.http.HttpServletRequest request){
+        String ip = request.getHeader("x-forwarded-for");
+        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)){
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)){
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)){
+            ip = request.getRemoteAddr();
+        }
+        return ip.equals("0:0:0:0:0:0:0:1")?"127.0.0.1":ip;
+    }
 }
