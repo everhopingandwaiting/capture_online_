@@ -15,6 +15,12 @@
 		AND guest_id=#guestId#
         AND  status=#status#
 	</select>
+    <select id="searchOrderByDate" parameterClass="cn.spring.cart.form.OrderForm"
+            resultClass="cn.spring.cart.form.OrderForm">
+        SELECT  * FROM order_tab
+        WHERE order_date=#order_date#
+
+    </select>
 	<select id="searchConditionCartList" parameterClass="cn.spring.cart.form.CartForm" resultClass="cn.spring.cart.form.CartForm">
 		SELECT
 			a.id as id, 
@@ -52,6 +58,11 @@
            #[]#
        </iterate>
    </update>
+    <update id="OrderStatusUpdate" parameterClass="cn.spring.cart.form.OrderForm" >
+        UPDATE  order_tab SET status=#status#
+        WHERE id=#id#
+
+    </update>
 	<delete id="account" parameterClass="cn.spring.cart.form.CartForm">
 		DELETE FROM cart_tab
 		WHERE guest_id=#guestId#

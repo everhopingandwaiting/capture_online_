@@ -57,4 +57,12 @@ public class CartService {
     public Integer CartStatusUpdate(List list) {
         return updateDao.execute("Cart.CartStatusUpdate", list);
     }
+
+    public Integer OrderStatusUpdate(OrderForm orderForm) {
+        return updateDao.execute("Cart.OrderStatusUpdate", orderForm);
+    }
+
+    public OrderForm searchOrderByDate(OrderForm orderForm) {
+        return queryDao.executeForObject("Cart.searchOrderByDate",orderForm,OrderForm.class);
+    }
 }

@@ -35,6 +35,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class CartController {
     private Order order;
+    private static Timestamp timestamp;
     @Autowired
 	CartService cartService;
 	
@@ -113,7 +114,8 @@ public class CartController {
         orderForm.setAmount(cartForms.stream().mapToInt
                 (CartForm::getGoodsPrice).sum());
         orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
-        orderForm.setOrder_date(new Timestamp(new Date().getTime()));
+        timestamp = new Timestamp(new Date().getTime());
+        orderForm.setOrder_date(timestamp);
         cartService.CartToOrder(orderForm);
         model.addAttribute("order", orderForm);
 //        return "cart/cartEnd";
@@ -138,7 +140,12 @@ public class CartController {
     }
 
     @RequestMapping(value = "/cart/cartEnd")
-    public String cartEndForm() {
+    public String cartEndForm(OrderForm orderForm) {
+        orderForm.setOrder_date(timestamp);
+
+        orderForm.setId(cartService.searchOrderByDate(orderForm).getId());
+        orderForm.setStatus("PAY_YES");
+        cartService.OrderStatusUpdate(orderForm);
         return "cart/cartEnd";
     }
 
