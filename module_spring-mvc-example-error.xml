@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_spring-mvc-example-error" default="compile.module.spring-mvc-example-error">
+  <dirname property="module.spring-mvc-example-error.basedir" file="${ant.file.module_spring-mvc-example-error}"/>
+  
+  <property name="module.jdk.home.spring-mvc-example-error" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.spring-mvc-example-error" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.spring-mvc-example-error" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.spring-mvc-example-error" value="-encoding UTF-8 -source 8 ${compiler.args}"/>
+  
+  <property name="spring-mvc-example-error.output.dir" value="${module.spring-mvc-example-error.basedir}/out/production/spring-mvc-example-error"/>
+  <property name="spring-mvc-example-error.testoutput.dir" value="${module.spring-mvc-example-error.basedir}/out/test/spring-mvc-example-error"/>
+  
+  <path id="spring-mvc-example-error.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="spring-mvc-example-error.module.production.classpath">
+    <path refid="${module.jdk.classpath.spring-mvc-example-error}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.37.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.3.1.classpath"/>
+    <path refid="library.pingpp-java-2.1.1.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-example-error.runtime.production.module.classpath">
+    <pathelement location="${spring-mvc-example-error.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.37.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.3.1.classpath"/>
+    <path refid="library.pingpp-java-2.1.1.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-example-error.module.classpath">
+    <path refid="${module.jdk.classpath.spring-mvc-example-error}"/>
+    <pathelement location="${spring-mvc-example-error.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.37.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.3.1.classpath"/>
+    <path refid="library.pingpp-java-2.1.1.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-example-error.runtime.module.classpath">
+    <pathelement location="${spring-mvc-example-error.testoutput.dir}"/>
+    <pathelement location="${spring-mvc-example-error.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.lib1.classpath"/>
+    <path refid="library.mysql:mysql-connector-java:5.1.37.classpath"/>
+    <path refid="library.com.google.code.gson:gson:2.3.1.classpath"/>
+    <path refid="library.pingpp-java-2.1.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.spring-mvc-example-error">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.spring-mvc-example-error">
+    <patternset refid="excluded.from.module.spring-mvc-example-error"/>
+  </patternset>
+  
+  <path id="spring-mvc-example-error.module.sourcepath">
+    <dirset dir="${module.spring-mvc-example-error.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.spring-mvc-example-error" depends="compile.module.spring-mvc-example-error.production,compile.module.spring-mvc-example-error.tests" description="Compile module spring-mvc-example-error"/>
+  
+  <target name="compile.module.spring-mvc-example-error.production" depends="register.custom.compilers" description="Compile module spring-mvc-example-error; production classes">
+    <mkdir dir="${spring-mvc-example-error.output.dir}"/>
+    <javac2 destdir="${spring-mvc-example-error.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.spring-mvc-example-error}/javac">
+      <compilerarg line="${compiler.args.spring-mvc-example-error}"/>
+      <bootclasspath refid="spring-mvc-example-error.module.bootclasspath"/>
+      <classpath refid="spring-mvc-example-error.module.production.classpath"/>
+      <src refid="spring-mvc-example-error.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.spring-mvc-example-error"/>
+    </javac2>
+    
+    <copy todir="${spring-mvc-example-error.output.dir}">
+      <fileset dir="${module.spring-mvc-example-error.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.spring-mvc-example-error.tests" depends="register.custom.compilers,compile.module.spring-mvc-example-error.production" description="compile module spring-mvc-example-error; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.spring-mvc-example-error" description="cleanup module">
+    <delete dir="${spring-mvc-example-error.output.dir}"/>
+    <delete dir="${spring-mvc-example-error.testoutput.dir}"/>
+  </target>
+</project>

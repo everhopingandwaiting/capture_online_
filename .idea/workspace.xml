@@ -2,96 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/APIConnectionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/APIException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/APIResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/pay/entity/ApiKey.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/App.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/AuthenticationException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Card.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/CardCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/ChannelException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Charge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/ChargeCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/ChargeDeserializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/pay/trade/ChargeOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/ChargeRefundCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/ChargeRefundCollectionDeserializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/CustomerCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/DeleteResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Event.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/EventCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/InvalidRequestException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Notify.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cn/spring/pay/entity/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/Pingpp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/PingppCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/PingppColllectionAPIResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/exception/PingppException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/PingppObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/PingppResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/RedEnvelope.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/RedEnvelopeCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/RedEnvelopeDeserializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Refund.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/SMSCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Summary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Token.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Transfer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/TransferCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/net/TransferDeserializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/model/Webhooks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/pingplusplus/util/WxpubOAuth.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/js/pingpp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/pingpp_java_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/css/pinus.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pay/result.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pay/wap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/pay/webview.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/manager/goodsEdit.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/476584_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/537530_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/541974_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/683629_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/769659_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/769660_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/801869_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/822722_fc_fc_fc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/Screenshot from 2014-08-17 21:04:44_fc_fc_fc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/Screenshot from 2015-09-15 21-45-21_fc_fc_fc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/Screenshot from 2015-09-16 20-23-14_fc_fc_fc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/blog-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/blog-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/blog-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/comment1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/menu-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/move-up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/news-letter-icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/p-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/p-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/p-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/s-6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/slide1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/slide2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/slide3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/images/slide4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/easing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.easing.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.openCarousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/move-top.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/form/CartForm.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/form/CartForm.class" />
@@ -104,20 +14,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/form/GoodsForm.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/form/GoodsForm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/form/GuestForm.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/guest/form/GuestForm.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/form/GuestForm.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/guest/form/GuestForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/form/CartForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/form/CartForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/form/GallerysForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GallerysForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/form/GoodsForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/GoodsSqlMap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoodsSqlMap.xml" afterPath="$PROJECT_DIR$/src/GoodsSqlMap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/guest/form/GuestForm.java" afterPath="$PROJECT_DIR$/src/cn/spring/guest/form/GuestForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-mvc-example-error.iml" afterPath="$PROJECT_DIR$/spring-mvc-example-error.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/spring-mvc-example-servlet.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/spring-mvc-example-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/spring-mvc-example-servlet.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/spring-mvc-example-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -410,8 +309,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="301" />
-    <option name="y" value="52" />
+    <option name="x" value="342" />
+    <option name="y" value="31" />
     <option name="width" value="1538" />
     <option name="height" value="873" />
   </component>
@@ -1591,7 +1490,7 @@
       <workItem from="1449889341802" duration="1571000" />
       <workItem from="1449890930908" duration="26219000" />
       <workItem from="1449967638713" duration="14465000" />
-      <workItem from="1449991684028" duration="736000" />
+      <workItem from="1449991684028" duration="850000" />
     </task>
     <task id="LOCAL-00001" summary="动态搜索 ok">
       <created>1449893831264</created>
@@ -1623,11 +1522,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449914091207</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TODO 添加支付模块 ， 完善ing">
+      <created>1449992511494</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1449992511494</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299597000" />
+    <option name="totallyTimeSpent" value="299711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1639,7 +1544,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="301" y="52" width="1538" height="873" extended-state="0" />
+    <frame x="342" y="31" width="1538" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1730,7 +1635,8 @@
     <MESSAGE value="重构 搜索 conttoller" />
     <MESSAGE value="修复 GoodsSqlMap.sql  some bug" />
     <MESSAGE value="TODO 使用&lt;sql id=&quot;&quot;&gt;,&lt;include refid=&quot;&quot;&gt;  重构 sql ,未知错误，待解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO 使用&lt;sql id=&quot;&quot;&gt;,&lt;include refid=&quot;&quot;&gt;  重构 sql ,未知错误，待解决" />
+    <MESSAGE value="TODO 添加支付模块 ， 完善ing" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO 添加支付模块 ， 完善ing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1895,6 +1801,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05226481">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1902,6 +1809,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40243903">
           <caret line="538" column="38" selection-start-line="538" selection-start-column="38" selection-end-line="538" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1909,6 +1819,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1916,6 +1827,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39198607">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1923,6 +1835,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9332322">
           <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1958,6 +1871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1965,6 +1879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35816166">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
@@ -1985,6 +1900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1992,6 +1908,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2029,6 +1948,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2068,6 +1990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46272492">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
