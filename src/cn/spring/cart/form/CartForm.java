@@ -12,7 +12,7 @@ public class CartForm {
 	private String goodsName;
 	private String goodsPicture;
 	private String goodsContext;
-	private String goodsPrice;
+	private int goodsPrice;
 	private Timestamp goodsDate;
     private String goodsUUID;
 

@@ -1,219 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:util="http://www.springframework.org/schema/util"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-<context:component-scan base-package="cn.spring" />
-    
-	<mvc:default-servlet-handler />
-	<!-- 静态资源映射 -->
-	<mvc:resources mapping="/img/**" location="/images/" />
-	<mvc:resources mapping="/css/**" location="/css/" />
-	<mvc:resources mapping="/js/**" location="/js/" />
-	<mvc:interceptors>
-		<bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
-		<bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
-	</mvc:interceptors>
-	<mvc:annotation-driven>
-		<mvc:argument-resolvers>
-			<bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
-			<bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
-		</mvc:argument-resolvers>
-	</mvc:annotation-driven>
-	<!-- 默认的注解映射的支持 
+    <context:component-scan base-package="cn.spring" />
+
+    <mvc:default-servlet-handler />
+    <!-- 静态资源映射 -->
+    <mvc:resources mapping="/img/**" location="/images/" />
+    <mvc:resources mapping="/css/**" location="/css/" />
+    <mvc:resources mapping="/js/**" location="/js/" />
+    <mvc:interceptors>
+        <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+        <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
+    </mvc:interceptors>
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+            <bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+    <!-- 默认的注解映射的支持-->
     <mvc:annotation-driven validator="validator" conversion-service="conversion-service" />  
     
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-        <property name="providerClass"  value="org.hibernate.validator.HibernateValidator"/>-->
-        <!--不设置则默认为classpath下的 ValidationMessages.properties 
-        <property name="validationMessageSource" ref="messageSource"/>
-    </bean>-->
-    <!--<bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
+        <property name="providerClass"  value="org.hibernate.validator.HibernateValidator"/>
+    <!--不设置则默认为classpath下的 ValidationMessages.properties-->
+    <!--<property name="validationMessageSource" ref="messageSource"/>-->
+</bean>
+  <bean id="conversion-service" class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
     <bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">  
-        <property name="basename" value="classpath:application-messages"/>  
+        <!--<property name="basename" value="classpath:application-messages"/>  -->
         <property name="fileEncodings" value="utf-8"/>  
         <property name="cacheSeconds" value="120"/>  
+    </bean>
+
+    <bean id="exceptionResolver" class="cn.spring.common.exception.HandlerExceptionResolverImpl">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.Exception">manager/error</prop>
+                <prop key="java.lang.Throwable">manager/error</prop>
+            </props>
+        </property>
+        <property name="statusCodes">
+            <props>
+                <prop key="manager/error">500</prop>
+                <prop key="manager/error">404</prop>
+            </props>
+        </property>
+        <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->
+        <property name="warnLogCategory" value="WARN"></property>
+        <!-- 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 -->
+        <property name="defaultErrorView" value="manager/error"></property>
+        <!-- 默认HTTP状态码 -->
+        <property name="defaultStatusCode" value="500"></property>
+    </bean>
+
+    <bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
+    <!--TODO what's java:comp-->
+    <bean id="TerasolunaSampleDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <!-- Tomcatの例 -->
+            <value>java:comp/env/jdbc/TerasolunaSampleDataSource</value>
+            <!-- Tomcat以外のAPサーバの例 -->
+            <!-- <value>jdbc/TerasolunaSampleDataSource</value> -->
+        </property>
+    </bean>
+    <!-- ======================================== トランザクション・AOP定義 -->
+    <!-- トランザクションマネージャの定義 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="TerasolunaSampleDataSource" />
+    </bean>
+
+    <!-- トランザクションインタセプタの定義 -->
+    <!-- トランザクションを設定するメソッドと実行モードを定義する。 transaction-manager="transactionManager"
+        の設定は省略可能。 -->
+    <tx:advice id="transactionInterceptor">
+        <tx:attributes>
+            <tx:method name="execute*" propagation="REQUIRED"
+                       rollback-for="java.lang.Exception" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- AOPの定義 -->
+    <!-- 下記で指定したパターンのBeanに対してインタセプタを適用する。 applicationContext.xmlで定義されたBeanのみ対象となるので注意すること。 -->
+    <aop:config>
+        <aop:pointcut id="daoBeans" expression="bean(*Controller)" />
+        <aop:advisor pointcut-ref="daoBeans" advice-ref="transactionInterceptor" />
+    </aop:config>
+    <!-- ======================================== リソースバンドル定義 -->
+    <!-- プロパティファイル利用 -->
+    <!-- basenamesプロパティでメッセージプロパティファイルを設定する。
+    <bean id="messageSource"
+        class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="application-messages, system-messages" />
     </bean>-->
 
-	<bean id="exceptionResolver" class="cn.spring.common.exception.HandlerExceptionResolverImpl">
-		<property name="exceptionMappings">
-             <props>
-                 <prop key="java.lang.Exception">manager/error</prop>
-                 <prop key="java.lang.Throwable">manager/error</prop>
-             </props>
-         </property>
-         <property name="statusCodes">
-             <props>
-                 <prop key="manager/error">500</prop>
-                 <prop key="manager/error">404</prop>
-             </props>
-         </property>
-         <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->     
-         <property name="warnLogCategory" value="WARN"></property>     
-         <!-- 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 -->     
-         <property name="defaultErrorView" value="manager/error"></property>     
-         <!-- 默认HTTP状态码 -->     
-         <property name="defaultStatusCode" value="500"></property> 
-	</bean>
+    <!-- DBメッセージ利用(第2メッセージリソースにプロパティファイル利用)設定例 -->
+    <!-- 別途applicationContext.xmlにてDBMessageResourceDAOの設定が必要 -->
+    <!-- <bean id="messageSource" class="jp.terasoluna.fw.message.DataSourceMessageSource">
+        <property name="parentMessageSource" ref="propertyMessageSource"/> <property
+        name="dbMessageResourceDAO" ref="dbMessageResourceDAO"/> <property name="defaultLocale"
+        value="ja_JP"/> </bean> <bean id="propertyMessageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="application-messages, system-messages"/>
+        </bean> -->
 
-	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler" />
-<!--TODO what's java:comp-->
-	<bean id="TerasolunaSampleDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName">
-			<!-- Tomcatの例 -->
-			<value>java:comp/env/jdbc/TerasolunaSampleDataSource</value>
-			<!-- Tomcat以外のAPサーバの例 -->
-			<!-- <value>jdbc/TerasolunaSampleDataSource</value> -->
-		</property>
-	</bean>
-	<!-- ======================================== トランザクション・AOP定義 -->
-	<!-- トランザクションマネージャの定義 -->
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="TerasolunaSampleDataSource" />
-	</bean>
+    <!-- プロパティファイル利用(第2メッセージリソースにDBメッセージ利用)設定例 -->
+    <!-- 別途applicationContext.xmlにてDBMessageResourceDAOの設定が必要 -->
+    <!-- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="application-messages, system-messages"/>
+        <property name="parentMessageSource" ref="dbMessageSource"/> </bean> <bean
+        id="dbMessageSource" class="jp.terasoluna.fw.message.DataSourceMessageSource">
+        <property name="dbMessageResourceDAO" ref="dbMessageResourceDAO"/> <property
+        name="defaultLocale" value="ja_JP"/> </bean> -->
 
-	<!-- トランザクションインタセプタの定義 -->
-	<!-- トランザクションを設定するメソッドと実行モードを定義する。 transaction-manager="transactionManager" 
-		の設定は省略可能。 -->
-	<tx:advice id="transactionInterceptor">
-		<tx:attributes>
-			<tx:method name="execute*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" />
-		</tx:attributes>
-	</tx:advice>
+    <!-- ======================================== iBATIS定義 -->
+    <!-- SqlMap定義 -->
+    <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+        <property name="configLocation" value="WEB-INF/sqlMapConfig.xml">
+        </property>
+        <property name="dataSource" ref="TerasolunaSampleDataSource" />
+        <property name="lobHandler" ref="lobHandler" />
+    </bean>
 
-	<!-- AOPの定義 -->
-	<!-- 下記で指定したパターンのBeanに対してインタセプタを適用する。 applicationContext.xmlで定義されたBeanのみ対象となるので注意すること。 -->
-	<aop:config>
-		<aop:pointcut id="daoBeans" expression="bean(*Controller)" />
-		<aop:advisor pointcut-ref="daoBeans" advice-ref="transactionInterceptor" />
-	</aop:config>
-	<!-- ======================================== リソースバンドル定義 -->
-	<!-- プロパティファイル利用 -->
-	<!-- basenamesプロパティでメッセージプロパティファイルを設定する。 
-	<bean id="messageSource"
-		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames" value="application-messages, system-messages" />
-	</bean>-->
+    <!-- 照会系のDAO定義 -->
+    <bean id="queryDAO" class="jp.terasoluna.fw.dao.ibatis.QueryDAOiBatisImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
 
-	<!-- DBメッセージ利用(第2メッセージリソースにプロパティファイル利用)設定例 -->
-	<!-- 別途applicationContext.xmlにてDBMessageResourceDAOの設定が必要 -->
-	<!-- <bean id="messageSource" class="jp.terasoluna.fw.message.DataSourceMessageSource"> 
-		<property name="parentMessageSource" ref="propertyMessageSource"/> <property 
-		name="dbMessageResourceDAO" ref="dbMessageResourceDAO"/> <property name="defaultLocale" 
-		value="ja_JP"/> </bean> <bean id="propertyMessageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> 
-		<property name="basenames" value="application-messages, system-messages"/> 
-		</bean> -->
+    </bean>
 
-	<!-- プロパティファイル利用(第2メッセージリソースにDBメッセージ利用)設定例 -->
-	<!-- 別途applicationContext.xmlにてDBMessageResourceDAOの設定が必要 -->
-	<!-- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> 
-		<property name="basenames" value="application-messages, system-messages"/> 
-		<property name="parentMessageSource" ref="dbMessageSource"/> </bean> <bean 
-		id="dbMessageSource" class="jp.terasoluna.fw.message.DataSourceMessageSource"> 
-		<property name="dbMessageResourceDAO" ref="dbMessageResourceDAO"/> <property 
-		name="defaultLocale" value="ja_JP"/> </bean> -->
+    <!-- 更新系のDAO定義 -->
+    <bean id="updateDAO" class="jp.terasoluna.fw.dao.ibatis.UpdateDAOiBatisImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
 
-	<!-- ======================================== iBATIS定義 -->
-	<!-- SqlMap定義 -->
-	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
-		<property name="configLocation" value="WEB-INF/sqlMapConfig.xml">
-		</property>
-		<property name="dataSource" ref="TerasolunaSampleDataSource" />
-		<property name="lobHandler" ref="lobHandler" />
-	</bean>
+    <!-- ストアドプロシジャ用のDAO定義 -->
+    <bean id="spDAO"
+          class="jp.terasoluna.fw.dao.ibatis.StoredProcedureDAOiBatisImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
 
-	<!-- 照会系のDAO定義 -->
-	<bean id="queryDAO" class="jp.terasoluna.fw.dao.ibatis.QueryDAOiBatisImpl">
-		<property name="sqlMapClient" ref="sqlMapClient" />
+    <!-- ローハンドラ用のDAO定義 -->
+    <bean id="queryRowHandleDAO" class="jp.terasoluna.fw.dao.ibatis.QueryRowHandleDAOiBatisImpl">
+        <property name="sqlMapClient" ref="sqlMapClient" />
+    </bean>
 
-	</bean>
+    <!-- DBメッセージリソース用DAO定義 -->
+    <!-- applicationContext.xmlでDBメッセージリソースの定義がされている場合は、 下記のコメントアウトを解除してDBメッセージリソース用DAOの設定を有効にすること。 -->
+    <!-- <bean id="DBMessageResourceDAO" class="jp.terasoluna.fw.message.DBMessageResourceDAOImpl">
+        <property name="dataSource" ref="TerasolunaSampleDataSource"/> <property
+        name="tableName" value="MESSAGES"/> <property name="codeColumn" value="CODE"/>
+        <property name="messageColumn" value="MESSAGE"/> <property name="languageColumn"
+        value="LANGUAGES"/> <property name="countryColumn" value="COUNTRY"/> <property
+        name="variantColumn" value="VARIANT"/> </bean> -->
 
-	<!-- 更新系のDAO定義 -->
-	<bean id="updateDAO" class="jp.terasoluna.fw.dao.ibatis.UpdateDAOiBatisImpl">
-		<property name="sqlMapClient" ref="sqlMapClient" />
-	</bean>
+    <!-- HandlerMapping -->
+    <bean
+            class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 
-	<!-- ストアドプロシジャ用のDAO定義 -->
-	<bean id="spDAO"
-		class="jp.terasoluna.fw.dao.ibatis.StoredProcedureDAOiBatisImpl">
-		<property name="sqlMapClient" ref="sqlMapClient" />
-	</bean>
+    <!-- HandlerAdapter -->
+    <bean
+            class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
 
-	<!-- ローハンドラ用のDAO定義 -->
-	<bean id="queryRowHandleDAO" class="jp.terasoluna.fw.dao.ibatis.QueryRowHandleDAOiBatisImpl">
-		<property name="sqlMapClient" ref="sqlMapClient" />
-	</bean>
+    <!-- ViewResolver -->
+    <bean id="viewResolverCommon"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+        <property name="order" value="1"/>
+    </bean>
 
-	<!-- DBメッセージリソース用DAO定義 -->
-	<!-- applicationContext.xmlでDBメッセージリソースの定義がされている場合は、 下記のコメントアウトを解除してDBメッセージリソース用DAOの設定を有効にすること。 -->
-	<!-- <bean id="DBMessageResourceDAO" class="jp.terasoluna.fw.message.DBMessageResourceDAOImpl"> 
-		<property name="dataSource" ref="TerasolunaSampleDataSource"/> <property 
-		name="tableName" value="MESSAGES"/> <property name="codeColumn" value="CODE"/> 
-		<property name="messageColumn" value="MESSAGE"/> <property name="languageColumn" 
-		value="LANGUAGES"/> <property name="countryColumn" value="COUNTRY"/> <property 
-		name="variantColumn" value="VARIANT"/> </bean> -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1073741824" />
+    </bean>
 
-	<!-- HandlerMapping -->
-	<bean
-		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+    <!-- 配置eh缓存管理器 -->
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
 
-	<!-- HandlerAdapter -->
-	<bean
-		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+    <!-- 配置一个简单的缓存工厂bean对象 -->
+    <bean id="simpleCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager" ref="cacheManager" />
+        <!-- 使用缓存 关联ehcache.xml中的缓存配置 -->
+        <property name="cacheName" value="pictureCache" />
+    </bean>
 
-	<!-- ViewResolver -->
-	<bean id="viewResolverCommon"
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
-		<property name="order" value="1"/>
-	</bean>
+    <!-- thymeleaf的视图解析器 -->
+    <bean id="templateResolver"
+          class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+        <property name="prefix" value="/WEB-INF/html1/" />
+        <property name="suffix" value=".html" />
+        <property name="templateMode" value="HTML5" />
+        <property name="characterEncoding" value="UTF-8"/>
+    </bean>
+    <bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+        <property name="templateResolver" ref="templateResolver" />
+    </bean>
+    <bean id="viewResolverThymeleaf" class="cn.spring.common.component.ThymeleafViewResolverEx">
+        <property name="templateEngine" ref="templateEngine" />
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="order" value="0"/>
+    </bean>
 
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="1073741824" />
-	</bean>
-
-	<!-- 配置eh缓存管理器 -->
-	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
-	 
-	<!-- 配置一个简单的缓存工厂bean对象 -->
-	<bean id="simpleCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
-	    <property name="cacheManager" ref="cacheManager" />
-	    <!-- 使用缓存 关联ehcache.xml中的缓存配置 -->
-	    <property name="cacheName" value="pictureCache" />
-	</bean>
-
-	<!-- thymeleaf的视图解析器 -->
-	<bean id="templateResolver"
-		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
-		<property name="prefix" value="/WEB-INF/html1/" />
-		<property name="suffix" value=".html" />
-		<property name="templateMode" value="HTML5" />
-		<property name="characterEncoding" value="UTF-8"/>
-	</bean>
-	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
-		<property name="templateResolver" ref="templateResolver" />
-	</bean>
-	<bean id="viewResolverThymeleaf" class="cn.spring.common.component.ThymeleafViewResolverEx">
-		<property name="templateEngine" ref="templateEngine" />
-		<property name="characterEncoding" value="UTF-8"/>
-		<property name="order" value="0"/>
-	</bean>
-
-	<!-- 处理器 
-	<bean name="/hello"
-		class="cn.javass.chapter2.web.controller.HelloWorldController" />-->
+    <!-- 处理器
+    <bean name="/hello"
+        class="cn.javass.chapter2.web.controller.HelloWorldController" />-->
 
 </beans>

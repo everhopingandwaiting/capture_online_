@@ -35,7 +35,7 @@
       <column name="view" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="information" sqlType="VARCHAR" precision="245" scale="0" nullable="true" jdbcType="12"/>
       <column name="picture" sqlType="VARCHAR" precision="85" scale="0" nullable="false" jdbcType="12"/>
-      <column name="price" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="type" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>

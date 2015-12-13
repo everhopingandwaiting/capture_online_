@@ -2,6 +2,8 @@ package cn.spring.cart.controller;
 
 import javax.servlet.http.HttpSession;
 
+import cn.spring.goods.form.GoodsForm;
+import cn.spring.goods.util.FormUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,12 +44,12 @@ public class CartController {
 //			String id =  String.valueOf(System.currentTimeMillis());
 
 			cartService.addCart(cartForm);
+            model.addAttribute("list", cartService.searchConditionCartList(cartForm));
+            return "cart/cartList";
 		}
-//		model.addAttribute("list", goodsService.searchGoodsList());
-
-
-		return "/";
-	}
+        model = FormUtil.model(new GoodsForm(), goodsService, model);
+        return "index";
+    }
 	
 	@RequestMapping(value = "/initCart", method = RequestMethod.GET)
 	public String initCart(Model model, CartForm cartForm, HttpSession session) {
@@ -59,7 +61,8 @@ public class CartController {
 			model.addAttribute("list", cartService.searchConditionCartList(cartForm));
 			return "cart/cartList";
 		}
-		return "/";
+        model = FormUtil.model(new GoodsForm(), goodsService, model);
+        return "index";
 	}
 	
 	@RequestMapping(value = "/delCart", method = RequestMethod.GET)
@@ -72,7 +75,8 @@ public class CartController {
 				model.addAttribute("list", cartService.searchConditionCartList(cartForm));
 				return "cart/cartList";
 			}
-		return "/";
+        model = FormUtil.model(new GoodsForm(), goodsService, model);
+        return "index";
 	}
     @RequestMapping(value = "/deleteSelected", params = "deleteIDS",method = RequestMethod.GET)
     public String deleteSelected(@RequestParam("id") int []ids ,Model model, CartForm cartForm, HttpSession session) {
@@ -84,7 +88,8 @@ public class CartController {
             model.addAttribute("list", cartService.searchConditionCartList(cartForm));
             return "cart/cartList";
         }
-        return "/";
+        model = FormUtil.model(new GoodsForm(), goodsService, model);
+        return "index";
     }
 	
 	@RequestMapping(value = "/account", method = RequestMethod.GET)

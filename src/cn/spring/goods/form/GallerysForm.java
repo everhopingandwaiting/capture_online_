@@ -13,7 +13,7 @@ public class GallerysForm {
 	private String pic;
 	private int view;
 	private String info;
-	private String price;
+	private int price;
 
 
 //	private String id;

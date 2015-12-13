@@ -15,7 +15,7 @@ public class GoodsForm {
     private int view;
     private String information;
     private String picture;
-    private String price;
+    private int price;
     private String type;
     private int limit;
 

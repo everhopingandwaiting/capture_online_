@@ -1,8 +1,7 @@
 package cn.spring.goods.controller;
 
-import java.io.UnsupportedEncodingException;
-import java.util.List;
-
+import cn.spring.goods.form.GoodsForm;
+import cn.spring.goods.service.GoodsService;
 import cn.spring.goods.util.FormUtil;
 import cn.spring.goods.util.SaveToJsonFile;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,19 +9,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import cn.spring.goods.form.GoodsForm;
-import cn.spring.goods.service.GoodsService;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Controller("GoodsController")
 @RequestMapping("/")
 public class GoodsController {
-    public static  String parentPath;
+    public static  String parentPath="index";
     @Autowired
 	GoodsService goodsService;
 

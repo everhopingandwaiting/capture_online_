@@ -3,7 +3,7 @@
             PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
             "http://ibatis.apache.org/dtd/sql-map-2.dtd">
 
-<!-- TODO 使用<sql id="">,<include refid="">  重构 sql -->
+<!-- TODO 使用<sql id="">,<include refid="">  重构 sql    ,llalla-->
 
 <sqlMap namespace="Goods">
 
@@ -36,14 +36,14 @@
             <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="AND" property="price">
+            <isGreaterThan compareValue="0" prepend="AND" property="price">
                 price  LIKE  '%$price$%'
-            </isNotEmpty>
+            </isGreaterThan>
         </dynamic>
     </sql>
     <select id="searchConditionGoodsList" parameterClass="cn.spring.goods.form.GoodsForm"
             resultClass="cn.spring.goods.form.GoodsForm">
-        SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+        SELECT id, category, date, name, tag, comment,view,information,picture,type,price
         FROM goods_tab
         <dynamic prepend="WHERE">
             <isNotEmpty prepend="AND" property="category">
@@ -73,17 +73,17 @@
             <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="AND" property="price">
+            <isGreaterThan compareValue="0" prepend="AND" property="price">
                 price  LIKE  '%$price$%'
-            </isNotEmpty>
+            </isGreaterThan>
         </dynamic>
-        ORDER BY type
+        ORDER BY view DESC
 
 
     </select>
 	<select id="searchGoodsList"  parameterClass="cn.spring.goods.form.GoodsForm"
             resultClass="cn.spring.goods.form.GoodsForm">
-        SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+        SELECT id, category, date, name, tag, comment,view,information,picture,type,price
         FROM goods_tab
         <dynamic prepend="WHERE">
             <isNotEmpty prepend="AND" property="category">
@@ -113,15 +113,17 @@
             <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="AND" property="price">
+            <isGreaterThan compareValue="0" prepend="AND" property="price">
                 price  LIKE  '%$price$%'
-            </isNotEmpty>
+            </isGreaterThan>
         </dynamic>
-	</select>
+        ORDER BY view ASC
+
+    </select>
 
 
 	<select id="searchConditionGoodsListHot" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+		SELECT id, category, date, name, tag, comment,view,information,picture,type,price
 		FROM goods_tab
         <dynamic prepend="WHERE">
             <isNotEmpty prepend="AND" property="category">
@@ -151,20 +153,20 @@
             <isNotEmpty prepend="AND" property="type">
                 type  LIKE  '%$type$%'
             </isNotEmpty>
-            <isNotEmpty prepend="AND" property="price">
+            <isGreaterThan compareValue="0" prepend="AND" property="price">
                 price  LIKE  '%$price$%'
-            </isNotEmpty>
+            </isGreaterThan>
         </dynamic>
 
         ORDER BY view DESC  LIMIT #limit#
 	</select>
 	<select id="searchGoodById" parameterClass="cn.spring.goods.form.GoodsForm" resultClass="cn.spring.goods.form.GoodsForm">
-		SELECT id, category, date, name, tag, comment,view,information,picture,price,type
+		SELECT id, category, date, name, tag, comment,view,information,picture,type ,price
 		FROM goods_tab
 		WHERE id = #id#
 	</select>
 	<insert id="insertGoods" parameterClass="cn.spring.goods.form.GoodsForm">
-		 INSERT  INTO   goods_tab( category, date, name, tag, comment,view,information,picture,price,type)
+		 INSERT  INTO   goods_tab( category, date, name, tag, comment,view,information,picture,type,price)
 		 VALUES   (#category#, #date#, #name#, #tag#, #comment#,#view#,#information#,#picture#,#price#,#type# )
 	</insert>
     <update id="updateGoodsById" parameterClass="cn.spring.goods.form.GoodsForm" >
@@ -197,9 +199,9 @@
             <isNotEmpty prepend="," property="type">
                 type=#type#
             </isNotEmpty>
-            <isNotEmpty prepend="," property="price">
+            <isGreaterThan compareValue="0" prepend="," property="price">
                 price=#price#
-            </isNotEmpty>
+            </isGreaterThan>
         </dynamic>
 
         where id=#id#
