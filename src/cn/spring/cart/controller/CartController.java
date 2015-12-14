@@ -35,7 +35,8 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class CartController {
     private Order order;
-    private static Timestamp timestamp;
+    private OrderForm orderForm;
+    private List<CartForm> cartForms;
     @Autowired
 	CartService cartService;
 	
@@ -68,7 +69,16 @@ public class CartController {
 
 			cartForm.setGuestId(uvo.getUserId());
 			model.addAttribute("list", cartService.searchConditionCartList(cartForm));
-			return "cart/cartList";
+           //init  orderForm
+            orderForm = new OrderForm();
+            orderForm.setGuest_id(uvo.getUserId());
+            cartForm.setGuestId(uvo.getUserId());
+           cartForms= cartService.searchConditionCartList(cartForm);
+            orderForm.setAmount(cartForms.stream().mapToInt
+                    (CartForm::getGoodsPrice).sum());
+            orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
+            model.addAttribute("order", orderForm);
+            return "cart/cartList";
 		}
         model = FormUtil.model(new GoodsForm(), goodsService, model);
         return "index";
@@ -107,15 +117,8 @@ public class CartController {
 	public String account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
 		log.info("从购物车--> OrderForm ，结算");
         UVO uvo = (UVO)session.getAttribute("UVO");
-        OrderForm orderForm = new OrderForm();
-        orderForm.setGuest_id(uvo.getUserId());
-        cartForm.setGuestId(uvo.getUserId());
-          List<CartForm> cartForms= cartService.searchConditionCartList(cartForm);
-        orderForm.setAmount(cartForms.stream().mapToInt
-                (CartForm::getGoodsPrice).sum());
-        orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
-        timestamp = new Timestamp(new Date().getTime());
-        orderForm.setOrder_date(timestamp);
+
+        orderForm.setOrder_date(new Timestamp(new Date().getTime()));
         cartService.CartToOrder(orderForm);
         model.addAttribute("order", orderForm);
 //        return "cart/cartEnd";
@@ -140,8 +143,8 @@ public class CartController {
     }
 
     @RequestMapping(value = "/cart/cartEnd")
-    public String cartEndForm(OrderForm orderForm) {
-        orderForm.setOrder_date(timestamp);
+    public String cartEndForm() {
+
 
         orderForm.setId(cartService.searchOrderByDate(orderForm).getId());
         orderForm.setStatus("PAY_YES");
