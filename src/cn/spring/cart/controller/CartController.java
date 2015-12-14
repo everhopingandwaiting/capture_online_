@@ -113,7 +113,7 @@ public class CartController {
         return "index";
     }
 	
-	@RequestMapping(value = "/account", method = RequestMethod.GET)
+	@RequestMapping(value = "/account", method = RequestMethod.POST)
 	public String account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
 		log.info("从购物车--> OrderForm ，结算");
         UVO uvo = (UVO)session.getAttribute("UVO");

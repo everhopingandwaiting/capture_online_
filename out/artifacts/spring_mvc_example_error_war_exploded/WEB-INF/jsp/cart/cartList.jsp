@@ -104,8 +104,8 @@
           <li><span></span><a href="account?guestId=${sessionScope.UVO.userId}"><div
                   class="fa fa-chevron-right"></div>pay  all goods </a></li>
             <li>
-               <input type="submit" class="btn btn-default" id="deleteIDS" name="deleteIDS">
-               delete  select goods </input>
+               <button type="submit" class="btn btn-default" id="deleteIDS" name="deleteIDS">
+               delete  select goods </button>
             </li>
         </ul>
       </div>
