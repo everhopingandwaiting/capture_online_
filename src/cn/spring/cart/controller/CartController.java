@@ -122,7 +122,7 @@ public class CartController {
      * @return
      */
 	@RequestMapping(value = "/account", method = RequestMethod.GET)
-	public String account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
+	public Charge account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
 		log.info("从购物车--> OrderForm ，结算");
         UVO uvo = (UVO)session.getAttribute("UVO");
         cartForm.setGuestId(uvo.getUserId());
@@ -147,7 +147,7 @@ public class CartController {
                 .mapToInt(CartForm::getId)
                 .boxed()
                 .collect(Collectors.toList()));
-        return "pay/webview";
+        return charge;
     }
 
     /**

@@ -137,15 +137,17 @@
         document.getElementById('pay').addEventListener('click',function(){
             pingpp_one.init({
                 app_id:'app_OuzfnLX9y9e5rjzX',
-                order_no:order_no,
+                order_no: $('#order_no').val(),
                 amount:$('#amount').val(),                                         //订单价格，单位：人民币 分
                 // 壹收款页面上需要展示的渠道，数组，数组顺序即页面展示出的渠道的顺序
                 // upmp_wap 渠道在微信内部无法使用，若用户未安装银联手机支付控件，则无法调起支付
                 channel:['alipay_wap','wx_pub','upacp_wap','yeepay_wap','jdpay_wap','bfb_wap'],
-                charge_url:'http://10.0.44.62:8080/account',  //商户服务端创建订单的 url
-                open_id:''
+                charge_url: 'http://10.0.44.62:8080/account',  //商户服务端创建订单的 url
+                open_id:'',
 //            charge_param:{a:john,b:SUSE},                  //(可选，使用微信公众号支付时必须传入)
-                                           //(可选，debug 模式下会将 charge_url 的返回结果透传回来)
+                  debug: true  ,
+                dataType:'jsonp'
+                //(可选，debug 模式下会将 charge_url 的返回结果透传回来)
             },function(res){
                 //debug 模式下获取 charge_url 的返回结果
                 if(res.debug&&res.chargeUrlOutput){
@@ -173,7 +175,7 @@
                         //这里处理支付成功页面点击“继续购物”按钮触发的方法，
                         //例如：若你需要点击“继续购物”按钮跳转到你的购买页，
                         //则在该方法内写入 window.location.href = "你的购买页面 url"
-                        window.location.href='http://10.0.44.62:8080/initGoods'
+                        window.location.href = 'http://10.0.44.62:8080/initGoods';
                     });
                 }
             });
