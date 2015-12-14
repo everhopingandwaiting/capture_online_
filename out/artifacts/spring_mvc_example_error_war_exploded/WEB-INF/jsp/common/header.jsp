@@ -169,10 +169,11 @@ $("#searchValue").autocomplete({
                fso = new ActiveXObject("Scripting.FileSystemObject");
                file = fso.GetFile("dataauto.json");*/
                var data = $.get("/dataauto.json", function (data, textStauts) {
+
                    var reault = data;
                    return reault;
                });
-
+               alert(data.responseText);
                return data;
 
            }

@@ -112,12 +112,20 @@ public class CartController {
         model = FormUtil.model(new GoodsForm(), goodsService, model);
         return "index";
     }
-	
+
+    /**
+     *
+     * @param model
+     * @param cartForm
+     * @param session
+     * @param request
+     * @return
+     */
 	@RequestMapping(value = "/account", method = RequestMethod.GET)
 	public String account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
 		log.info("从购物车--> OrderForm ，结算");
         UVO uvo = (UVO)session.getAttribute("UVO");
-
+        cartForm.setGuestId(uvo.getUserId());
         orderForm.setOrder_date(new Timestamp(new Date().getTime()));
         cartService.CartToOrder(orderForm);
         model.addAttribute("order", orderForm);
@@ -142,6 +150,10 @@ public class CartController {
         return "pay/webview";
     }
 
+    /**
+     *
+     * @return
+     */
     @RequestMapping(value = "/cart/cartEnd")
     public String cartEndForm() {
 
@@ -152,6 +164,11 @@ public class CartController {
         return "cart/cartEnd";
     }
 
+    /**
+     *
+     * @param request
+     * @return
+     */
     public String getRemoteHost(javax.servlet.http.HttpServletRequest request){
         String ip = request.getHeader("x-forwarded-for");
         if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)){

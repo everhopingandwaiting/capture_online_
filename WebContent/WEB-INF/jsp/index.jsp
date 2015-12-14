@@ -32,9 +32,9 @@
        });
     });
  function changeURL(x) {
-
-     var a = document.getElementById("gridID");
-     for( var i=0;i< a.size;i++) {
+//alert(x.name);
+     var a = document.getElementsByName("gridID");
+     for( var i=0;i< a.length;i++) {
          a[i].href = "galleryDetail?goodsId="+ x.name;
      }
 
@@ -75,19 +75,19 @@
                 <div class="images">
                   <c:forEach items="${grid0}" var="gard" varStatus="status">
                   <img   id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt=""
-                        onclick="changeURL(this)"/>
+                         onmousemove="changeURL(this)"/>
 
                     </c:forEach>
                 </div>
               </div>
             </div>
             <div class="grid_4">
-              <div data-si-mousemove-trigger="100" class="shuffle-me">
+              <div data-si-mousemove-trigger="100" class="shuffle-me offset__1">
                 <a  name="gridID" href="gallery" class="info" target="_blank"></a>
                 <div class="images">
 
                   <c:forEach items="${grid1}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL(this)"/>
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onmousemove="changeURL(this)"/>
 
                   </c:forEach>
 
@@ -113,7 +113,7 @@
                 <a  name="gridID" href="gallery" class="info" target="_blank"></a>
                 <div class="images">
                   <c:forEach items="${grid3}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL(this)">
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onmousemove="changeURL(this)">
 
                   </c:forEach>
 
@@ -124,7 +124,7 @@
 
                 <div class="images">
                   <c:forEach items="${grid4}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt=""   onfocus="changeURL(this)">
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt=""   onmousemove="changeURL(this)">
 
                   </c:forEach>
 
@@ -138,7 +138,7 @@
 
                 <div class="images">
                   <c:forEach items="${grid5}" var="gard" varStatus="status">
-                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onfocus="changeURL(this)">
+                    <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onmousemove="changeURL(this)">
 
                   </c:forEach>
 

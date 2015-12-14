@@ -142,8 +142,9 @@ $("#searchValue").autocomplete({
             "Scheme"
         ];
         console.log($("#searchValue"));
+        var a = readFile().responseText;
         $("#searchValue").autocomplete(function(){
-            source: availableTags
+            source: a
         });
     });
 
@@ -169,6 +170,7 @@ $("#searchValue").autocomplete({
                fso = new ActiveXObject("Scripting.FileSystemObject");
                file = fso.GetFile("dataauto.json");*/
                var data = $.get("/dataauto.json", function (data, textStauts) {
+
                    var reault = data;
                    return reault;
                });

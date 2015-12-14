@@ -101,8 +101,11 @@
       <div class="grid_2">
         <h2>cart list </h2>
         <ul class="list-1">
-          <li><span></span><a href="account?guestId=${sessionScope.UVO.userId}"><div
+         <%-- <li><span></span><a href="account?guestId=${sessionScope.UVO.userId}"><div
                   class="fa fa-chevron-right"></div>pay  all goods </a></li>
+            <li>--%>
+            <li><span></span><a id="pay"><div
+                    class="fa fa-chevron-right"></div>pay  all goods </a></li>
             <li>
                <button type="submit" class="btn btn-default" id="deleteIDS" name="deleteIDS">
                delete  select goods </button>
@@ -110,6 +113,14 @@
         </ul>
       </div>
     </form>
+        <div class="row ">
+        <span class="iphone"><img src="../../../images/big3.jpg" width="100%" height="auto"></span>
+        <label class="text_amount">
+              PAID AMOUNT : <input id="amount" type="text"  readonly="readonly"
+                                 value="${order.amount}"/>
+        </label>
+        <input hidden="hidden" id="order_no" value="${order.uuid}" type="text"/>
+        </div>
     </div>
   </div>
 </section>
@@ -118,6 +129,59 @@
 =================================-->
 <jsp:include page="../common/footer.jsp"/>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+<script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>
+<script type="text/javascript">
+    //        var  order_no=document.getElementById("order_no").va
+    var order_no = $("#order_no").val();
+    document.addEventListener('pingpp_one_ready',function(){
+        document.getElementById('pay').addEventListener('click',function(){
+            pingpp_one.init({
+                app_id:'app_OuzfnLX9y9e5rjzX',
+                order_no:order_no,
+                amount:$('#amount').val(),                                         //订单价格，单位：人民币 分
+                // 壹收款页面上需要展示的渠道，数组，数组顺序即页面展示出的渠道的顺序
+                // upmp_wap 渠道在微信内部无法使用，若用户未安装银联手机支付控件，则无法调起支付
+                channel:['alipay_wap','wx_pub','upacp_wap','yeepay_wap','jdpay_wap','bfb_wap'],
+                charge_url:'http://10.0.44.62:8080/account',  //商户服务端创建订单的 url
+                open_id:''
+//            charge_param:{a:john,b:SUSE},                  //(可选，使用微信公众号支付时必须传入)
+                                           //(可选，debug 模式下会将 charge_url 的返回结果透传回来)
+            },function(res){
+                //debug 模式下获取 charge_url 的返回结果
+                if(res.debug&&res.chargeUrlOutput){
+                    console.log(res.chargeUrlOutput);
+                }
+                if(!res.status){
+                    //处理错误
+                    alert(res.msg);
+                }
+                else{
+                    //debug 模式下调用 charge_url 后会暂停，可以调用 pingpp_one.resume 方法继续执行
+                    if(res.debug&&!res.wxSuccess){
+                        if(confirm('当前为 debug 模式，是否继续支付？')){
+                            pingpp_one.resume();
+                        }
+                    }
+                    //若微信公众号渠道需要使用壹收款的支付成功页面，则在这里进行成功回调，
+                    //调用 pingpp_one.success 方法，你也可以自己定义回调函数
+                    //其他渠道的处理方法请见第 2 节
+                    else pingpp_one.success(function(res){
+                        if(!res.status){
+                            alert(res.msg);
+                        }
+                    },function(){
+                        //这里处理支付成功页面点击“继续购物”按钮触发的方法，
+                        //例如：若你需要点击“继续购物”按钮跳转到你的购买页，
+                        //则在该方法内写入 window.location.href = "你的购买页面 url"
+                        window.location.href='http://10.0.44.62:8080/initGoods'
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
 </body>
 </html>
 

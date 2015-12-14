@@ -56,7 +56,7 @@ document.addEventListener('pingpp_one_ready',function(){
     document.getElementById('pay').addEventListener('click',function(){
         pingpp_one.init({
             app_id:'app_OuzfnLX9y9e5rjzX',
-            order_no:order_no,
+            order_no: $('#order_no').val(),
             amount:$('#amount').val(),                                         //订单价格，单位：人民币 分
             // 壹收款页面上需要展示的渠道，数组，数组顺序即页面展示出的渠道的顺序
             // upmp_wap 渠道在微信内部无法使用，若用户未安装银联手机支付控件，则无法调起支付
@@ -100,7 +100,7 @@ document.addEventListener('pingpp_one_ready',function(){
 
     </script>
 
-    <script type="text/javascript">
+    <%--<script type="text/javascript">
         var script=document.createElement('script');
         script.type='text/javascript';
         script.src='https://one.pingxx.com/lib/pingpp_one.js';
@@ -117,7 +117,7 @@ document.addEventListener('pingpp_one_ready',function(){
         };
         document.body.appendChild(script);
     </script>
-
+--%>
 
     <%--<script src="../../../js/pingpp.js" type="text/javascript"></script>
 <script>

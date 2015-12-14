@@ -80,6 +80,24 @@
 =================================-->
 <jsp:include page="../common/footer.jsp"/>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+<script type="text/javascript">
+    var script=document.createElement('script');
+    script.type='text/javascript';
+    script.src='https://one.pingxx.com/lib/pingpp_one.js';
+    script.onload=function(){
+        document.addEventListener('pingpp_one_ready',function(e){
+            pingpp_one.success(function(res){
+                if(!res.status){
+                    alert(res.msg);
+                }
+            },function(){
+                winndow.location.href="http://10.0.44.62:8080/";   //示例
+            });
+        });
+    };
+    document.body.appendChild(script);
+</script>
+
 </body>
 </html>
 
