@@ -70,7 +70,7 @@
           <div class="row">
             <div class="grid_8">
 
-              <div data-si-mousemove-trigger="100"  class="shuffle-me offset__1">
+              <div data-si-mousemove-trigger="100"  class="shuffle-me ">
                   <a  name="gridID" href="gallery" class="info" target="_parent"></a>
                 <div class="images">
                   <c:forEach items="${grid0}" var="gard" varStatus="status">
@@ -82,7 +82,7 @@
               </div>
             </div>
             <div class="grid_4">
-              <div data-si-mousemove-trigger="100" class="shuffle-me offset__1">
+              <div data-si-mousemove-trigger="100" class="shuffle-me ">
                 <a  name="gridID" href="gallery" class="info" target="_blank"></a>
                 <div class="images">
 
@@ -94,7 +94,7 @@
 
                 </div>
               </div>
-              <div data-si-mousemove-trigger="100" class="shuffle-me offset__1">
+              <div data-si-mousemove-trigger="100" class="shuffle-me ">
                 <a  name="gridID" href="gallery" class="info" target="_blank"></a>
                 <div class="images">
 

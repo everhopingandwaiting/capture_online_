@@ -247,20 +247,7 @@ function test(data){
  });
  }
 
- function ab () {
-     var resp;
-     $.ajax({
-         dataType: 'json',
-         type: 'GET',
-         url: 'http://10.0.44.62:8080/dataauto.json',
-         success: function (response) {
-             console.log(response); // logs ["Italy","Hawaii"] -as expected
-             var arrResponse = JSON.parse(response); //convert json object to array
-             resp = arrResponse;
-         }
-     });
-     return resp;
- }
+
 //var jjj = ab();
 //$('#autocomplete').autocomplete({
 //    source: jjj,                //this is what I want... errors out.
@@ -283,11 +270,39 @@ function test(data){
  });
 
  */
-
+function ab () {
+    var resp;
+    $.ajax({
+        dataType: 'json',
+        type: 'GET',
+        url: 'http://10.0.44.62:8080/dataauto.json',
+        success: function (response) {
+            console.log(response); // logs ["Italy","Hawaii"] -as expected
+            var arrResponse = JSON.parse(response); //convert json object to array
+            resp = arrResponse;
+        }
+    });
+    return resp;
+}
     $('#autocomplete')
             .AutoComplete({
-                'data': "http://10.0.44.62:8080/dataauto.json",
+                'data': "/dataauto.json",
                 'ajaxDataType': 'json',
+                'afterSelectedHandler':function(data) {
+                    $.ajax({
+                        type: 'GET',
+                        url:'/GlobalSearch?autocomplete='+data.value,
+                        success:function(resp) {
+//                            alert(data);
+                            window.location.href='/GlobalSearch?autocomplete='+data.value ;
+
+
+                            console.log(resp);
+                        }
+
+
+                    });
+                },
                 'onerror': function(msg) {
                     alert(msg);
                 }
