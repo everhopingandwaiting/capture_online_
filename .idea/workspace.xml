@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="pay_final third commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/cart/controller/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/cart/controller/CartController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" afterPath="$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" afterPath="$PROJECT_DIR$/src/cn/spring/goods/controller/GoodsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/common/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/css/jquery-ui.css" afterPath="$PROJECT_DIR$/WebContent/css/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/jquery-ui.js" afterPath="$PROJECT_DIR$/WebContent/js/jquery-ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/jquery.js" afterPath="$PROJECT_DIR$/WebContent/js/jquery.js" />
+    <list default="true" id="81c58819-e69f-405f-8fb6-1025b88dfd38" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/classes/cn/spring/goods/controller/GoodsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" afterPath="$PROJECT_DIR$/out/production/spring-mvc-example-error/cn/spring/goods/controller/GoodsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartEnd.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/WEB-INF/jsp/cart/cartEnd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/jquery-ui.css" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/css/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery-ui.js" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.js" afterPath="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/js/jquery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="spring-mvc-example-error.iws" />
@@ -73,74 +67,31 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="cartEnd.jsp" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.6467818">
-                    <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
-                    <folding>
-                      <marker date="1450144921390" expanded="false" signature="1349:1401" placeholder="..." />
-                      <marker date="1450144921390" expanded="true" signature="1402:1778" placeholder="..." />
-                      <marker date="1450144921390" expanded="true" signature="1517:1769" placeholder="..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="webview.jsp" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/pay/webview.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0">
-                    <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="cartList.jsp" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.22023048">
-                    <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
-                    <folding>
-                      <marker date="1450161960560" expanded="false" signature="1191:1243" placeholder="..." />
-                      <marker date="1450161960560" expanded="true" signature="1244:1620" placeholder="..." />
-                      <marker date="1450161960560" expanded="true" signature="1359:1611" placeholder="..." />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="spring-mvc-example-error" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8063187">
-              <caret line="161" column="14" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="128" column="37" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state>
+              <first_editor vertical-scroll-proportion="-0.83682007">
+                <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -239,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/cn/spring/goods/util/SaveToJsonFile.java" />
         <option value="$PROJECT_DIR$/WebContent/js/jquery.autocomplete.min.js" />
         <option value="$PROJECT_DIR$/WebContent/js/jquery-ui.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/WebContent/js/jquery.js" />
         <option value="$PROJECT_DIR$/src/cn/spring/goods/service/GoodsService.java" />
         <option value="$PROJECT_DIR$/src/cn/spring/goods/util/FormUtil.java" />
@@ -271,6 +221,7 @@
         <option value="$PROJECT_DIR$/out/artifacts/spring_mvc_example_error_war_exploded/dataauto.json" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/jsp/common/header.jsp" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -299,10 +250,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="173" />
+    <option name="x" value="-54" />
+    <option name="y" value="76" />
     <option name="width" value="1444" />
-    <option name="height" value="873" />
+    <option name="height" value="862" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1578,7 +1529,7 @@
       <workItem from="1450073504835" duration="1727000" />
       <workItem from="1450075251838" duration="7466000" />
       <workItem from="1450091661906" duration="9860000" />
-      <workItem from="1450142522907" duration="21410000" />
+      <workItem from="1450142522907" duration="22634000" />
     </task>
     <task id="LOCAL-00001" summary="动态搜索 ok">
       <created>1449893831264</created>
@@ -1652,11 +1603,17 @@
       <option name="project" value="LOCAL" />
       <updated>1450100606465</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=" AutoComplete_______FINAL___OK___!!!!&#10; --pay_final third commit">
+      <created>1450166744309</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1450166744309</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="378021000" />
+    <option name="totallyTimeSpent" value="379245000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1668,7 +1625,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="173" width="1444" height="873" extended-state="0" />
+    <frame x="-54" y="76" width="1444" height="862" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1676,11 +1633,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4090909" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0013227513" sideWeight="0.39800286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0013422819" sideWeight="0.39800286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42172524" sideWeight="0.49705014" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22849463" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46575344" sideWeight="0.49713057" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0013227513" sideWeight="0.60199714" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0013422819" sideWeight="0.60199714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21643835" sideWeight="0.48063126" order="12" side_tool="false" content_ui="tabs" />
@@ -1766,7 +1723,8 @@
     <MESSAGE value="pay function:&#10;   last commit ,next branch  is pay_final" />
     <MESSAGE value="pay_final first commit" />
     <MESSAGE value="pay_final third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="pay_final third commit" />
+    <MESSAGE value=" AutoComplete_______FINAL___OK___!!!!&#10; --pay_final third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value=" AutoComplete_______FINAL___OK___!!!!&#10; --pay_final third commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1869,16 +1827,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/pay/result.php">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35816166">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/images/page2_img1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2208,18 +2156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6467818">
-          <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
-          <folding>
-            <marker date="1450144921390" expanded="false" signature="1349:1401" placeholder="..." />
-            <marker date="1450144921390" expanded="true" signature="1402:1778" placeholder="..." />
-            <marker date="1450144921390" expanded="true" signature="1517:1769" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/js/jquery.autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10344828">
@@ -2270,21 +2206,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/spring/cart/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8063187">
-          <caret line="161" column="14" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="128" column="37" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22023048">
-          <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.29705507">
+          <caret line="188" column="28" selection-start-line="188" selection-start-column="28" selection-end-line="188" selection-end-column="28" />
           <folding>
-            <marker date="1450161960560" expanded="false" signature="1191:1243" placeholder="..." />
-            <marker date="1450161960560" expanded="true" signature="1244:1620" placeholder="..." />
-            <marker date="1450161960560" expanded="true" signature="1359:1611" placeholder="..." />
+            <marker date="1450161960560" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1450161960560" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1450161960560" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/jsp/cart/cartEnd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6467818">
+          <caret line="94" column="15" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
+          <folding>
+            <marker date="1450144921390" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1450144921390" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1450144921390" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state>
+          <first_editor vertical-scroll-proportion="-0.83682007">
+            <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
