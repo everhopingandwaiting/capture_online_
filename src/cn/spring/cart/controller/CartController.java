@@ -1,6 +1,7 @@
 package cn.spring.cart.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.spring.cart.form.OrderForm;
@@ -23,6 +24,7 @@ import cn.spring.cart.service.CartService;
 import cn.spring.goods.service.GoodsService;
 import cn.spring.web.form.UVO;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Timestamp;
 import java.util.Date;
@@ -114,17 +116,21 @@ public class CartController {
     }
 
     /**
-     *
      * @param model
      * @param cartForm
      * @param session
      * @param request
      * @return
      */
-	@RequestMapping(value = "/account", method = RequestMethod.GET)
-	public Charge account(Model model, CartForm cartForm,HttpSession session,HttpServletRequest request) {
-		log.info("从购物车--> OrderForm ，结算");
-        UVO uvo = (UVO)session.getAttribute("UVO");
+    @ResponseBody
+    @RequestMapping(value = "/account", method = RequestMethod.GET)
+    public Charge account(HttpServletResponse response, Model model, CartForm cartForm, HttpSession session,
+                          HttpServletRequest
+                                  request) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
+        log.info("从购物车--> OrderForm ，结算");
+        UVO uvo = (UVO) session.getAttribute("UVO");
         cartForm.setGuestId(uvo.getUserId());
         orderForm.setOrder_date(new Timestamp(new Date().getTime()));
         cartService.CartToOrder(orderForm);
@@ -137,8 +143,8 @@ public class CartController {
         order.setOrder_no(orderForm.getUuid());
         order.setClient_ip(getRemoteHost(request));
         ChargeOrder chargeOrder = new ChargeOrder();
-       log.info("----start charge ");
-           Charge charge= chargeOrder.charge(order, new ApiKey());
+        log.info("----start charge ");
+        Charge charge = chargeOrder.charge(order, new ApiKey());
         log.info("search charge ");
         chargeOrder.retrieve(charge.getId());
         log.info("list charge");
@@ -147,6 +153,7 @@ public class CartController {
                 .mapToInt(CartForm::getId)
                 .boxed()
                 .collect(Collectors.toList()));
+//        return "pay/webview";
         return charge;
     }
 

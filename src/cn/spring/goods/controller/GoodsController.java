@@ -83,7 +83,7 @@ public class GoodsController {
 	}
 
     @RequestMapping(value = "/GlobalSearch", method = RequestMethod.POST)
-    public ModelAndView showGlobalSearchForm(HttpServletRequest httpSession,@RequestParam(value = "searchValue") String value, Model model, GoodsForm goodsForm) {
+    public ModelAndView showGlobalSearchForm(HttpServletRequest httpSession,@RequestParam(value = "autocomplete") String value, Model model, GoodsForm goodsForm) {
         ModelAndView modelAndView = new ModelAndView();
         goodsForm.setName(value);
         modelAndView.setViewName(parentPath);
