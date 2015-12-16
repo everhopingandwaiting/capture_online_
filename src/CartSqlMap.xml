@@ -68,7 +68,7 @@
 		WHERE guest_id=#guestId#
 	</delete>
     <insert id="CartToOrder" parameterClass="cn.spring.cart.form.OrderForm" >
-        INSERT INTO  order_tab( guest_id, amount, uuid, order_date) VALUES
-            (#guest_id#, #amount#, #uuid#, #order_date#)
+        INSERT INTO  order_tab( guest_id, amount, uuid, order_date,status) VALUES
+            (#guest_id#, #amount#, #uuid#, #order_date#,#status#)
     </insert>
 </sqlMap>

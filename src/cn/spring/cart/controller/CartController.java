@@ -37,8 +37,9 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class CartController {
     private Order order;
-    private OrderForm orderForm;
+    private OrderForm orderForm = new OrderForm();
     private List<CartForm> cartForms;
+    private String uuid = UUID.randomUUID().toString().replaceAll("\\-", "").substring(1, 20);
     @Autowired
 	CartService cartService;
 	
@@ -57,6 +58,13 @@ public class CartController {
 
 			cartService.addCart(cartForm);
             model.addAttribute("list", cartService.searchConditionCartList(cartForm));
+            orderForm.setGuest_id(uvo.getUserId());
+            cartForm.setGuestId(uvo.getUserId());
+            cartForms= cartService.searchConditionCartList(cartForm);
+            orderForm.setAmount(cartForms.stream().mapToInt
+                    (CartForm::getGoodsPrice).sum());
+            orderForm.setUuid(uuid);
+            model.addAttribute("order", orderForm);
             return "cart/cartList";
 		}
         model = FormUtil.model(new GoodsForm(), goodsService, model);
@@ -72,13 +80,13 @@ public class CartController {
 			cartForm.setGuestId(uvo.getUserId());
 			model.addAttribute("list", cartService.searchConditionCartList(cartForm));
            //init  orderForm
-            orderForm = new OrderForm();
+
             orderForm.setGuest_id(uvo.getUserId());
             cartForm.setGuestId(uvo.getUserId());
            cartForms= cartService.searchConditionCartList(cartForm);
             orderForm.setAmount(cartForms.stream().mapToInt
                     (CartForm::getGoodsPrice).sum());
-            orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
+            orderForm.setUuid(uuid);
             model.addAttribute("order", orderForm);
             return "cart/cartList";
 		}
@@ -94,7 +102,14 @@ public class CartController {
 			if (uvo != null) {
 				cartForm.setGuestId(uvo.getUserId());
 				model.addAttribute("list", cartService.searchConditionCartList(cartForm));
-				return "cart/cartList";
+                orderForm.setGuest_id(uvo.getUserId());
+                cartForm.setGuestId(uvo.getUserId());
+                cartForms= cartService.searchConditionCartList(cartForm);
+                orderForm.setAmount(cartForms.stream().mapToInt
+                        (CartForm::getGoodsPrice).sum());
+                orderForm.setUuid(uuid);
+                model.addAttribute("order", orderForm);
+                return "cart/cartList";
 			}
         model = FormUtil.model(new GoodsForm(), goodsService, model);
         return "index";
@@ -109,6 +124,13 @@ public class CartController {
         if (uvo != null) {
             cartForm.setGuestId(uvo.getUserId());
             model.addAttribute("list", cartService.searchConditionCartList(cartForm));
+            orderForm.setGuest_id(uvo.getUserId());
+            cartForm.setGuestId(uvo.getUserId());
+            cartForms= cartService.searchConditionCartList(cartForm);
+            orderForm.setAmount(cartForms.stream().mapToInt
+                    (CartForm::getGoodsPrice).sum());
+            orderForm.setUuid(uuid);
+            model.addAttribute("order", orderForm);
             return "cart/cartList";
         }
         model = FormUtil.model(new GoodsForm(), goodsService, model);
@@ -123,10 +145,14 @@ public class CartController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/account", method = RequestMethod.GET)
+    @RequestMapping(value = "/account", method = RequestMethod.POST)
     public Charge account(HttpServletResponse response, Model model, CartForm cartForm, HttpSession session,
                           HttpServletRequest
-                                  request) {
+                                  request
+//                          @RequestParam(value = "channel") String channel,
+//                          @RequestParam(value = "amount")String amount,
+//                          @RequestParam(value = "order_no")String order_no
+                          ) {
         response.setHeader("Access-Control-Allow-Origin", "*");
 
         log.info("从购物车--> OrderForm ，结算");
@@ -154,6 +180,11 @@ public class CartController {
                 .boxed()
                 .collect(Collectors.toList()));
 //        return "pay/webview";
+        if (charge != null) {
+            orderForm.setId(cartService.searchOrderByDate(orderForm).getId());
+            orderForm.setStatus("PAY_YES");
+            cartService.OrderStatusUpdate(orderForm);
+        }
         return charge;
     }
 

@@ -20,26 +20,8 @@
 <script src="js/tmStickUp.js"></script>
 <script src="js/jquery.ui.totop.js"></script>
 <script src="js/jquery.shuffle-images.js"></script>
-<script type="text/javascript">
- $(window).load(function(){
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  $('#stuck_container').tmStickUp({});  
- }); 
+<link  href="../../css/smohan.pop&share.css" type="text/css" rel="stylesheet"/>
 
- $(document).ready(function(){
-       $(".shuffle-me").shuffleImages({
-         target: ".images > img"
-       });
-    });
- function changeURL(x) {
-//alert(x.name);
-     var a = document.getElementsByName("gridID");
-     for( var i=0;i< a.length;i++) {
-         a[i].href = "galleryDetail?goodsId="+ x.name;
-     }
-
- }
-</script>
 <!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -54,6 +36,26 @@
 </head>
 
 <body class="page1" id="top">
+<script type="text/javascript">
+    $(window).load(function(){
+        $().UItoTop({ easingType: 'easeOutQuart' });
+        $('#stuck_container').tmStickUp({});
+    });
+
+    $(document).ready(function(){
+        $(".shuffle-me").shuffleImages({
+            target: ".images > img"
+        });
+    });
+    function changeURL(x) {
+//alert(x.name);
+        var a = document.getElementsByName("gridID");
+        for( var i=0;i< a.length;i++) {
+            a[i].href = "galleryDetail?goodsId=12Detail?goodsId="+ x.name;
+        }
+
+    }
+</script>
 <!--==============================
               header
 =================================-->
@@ -71,7 +73,7 @@
             <div class="grid_8">
 
               <div data-si-mousemove-trigger="100"  class="shuffle-me ">
-                  <a  name="gridID" href="gallery" class="info" target="_parent"></a>
+                  <a  name="gridID" href="galleryDetail?goodsId=13" class="info" target="_parent"></a>
                 <div class="images">
                   <c:forEach items="${grid0}" var="gard" varStatus="status">
                   <img   id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt=""
@@ -83,7 +85,7 @@
             </div>
             <div class="grid_4">
               <div data-si-mousemove-trigger="100" class="shuffle-me ">
-                <a  name="gridID" href="gallery" class="info" target="_blank"></a>
+                <a  name="gridID" href="galleryDetail?goodsId=14" class="info" target="_parent"></a>
                 <div class="images">
 
                   <c:forEach items="${grid1}" var="gard" varStatus="status">
@@ -95,7 +97,7 @@
                 </div>
               </div>
               <div data-si-mousemove-trigger="100" class="shuffle-me ">
-                <a  name="gridID" href="gallery" class="info" target="_blank"></a>
+                <a  name="gridID" href="galleryDetail?goodsId=15" class="info" target="_parent"></a>
                 <div class="images">
 
                   <c:forEach items="${grid2}" var="gard" varStatus="status">
@@ -110,7 +112,7 @@
             <div class="clear"></div>
             <div class="grid_4">
               <div data-si-mousemove-trigger="100" class="shuffle-me">
-                <a  name="gridID" href="gallery" class="info" target="_blank"></a>
+                <a  name="gridID" href="galleryDetail?goodsId=9" class="info" target="_parent"></a>
                 <div class="images">
                   <c:forEach items="${grid3}" var="gard" varStatus="status">
                     <img  id="${gard.id}" src="${gard.picture}" name="${gard.id}" alt="" onmousemove="changeURL(this)">
@@ -120,7 +122,7 @@
                 </div>
               </div>
               <div data-si-mousemove-trigger="100" class="shuffle-me">
-                <a  name="gridID" href="gallery" class="info" target="_blank"></a>
+                <a  name="gridID" href="galleryDetail?goodsId=10" class="info" target="_parent"></a>
 
                 <div class="images">
                   <c:forEach items="${grid4}" var="gard" varStatus="status">
@@ -134,7 +136,7 @@
             </div>
             <div class="grid_8">
               <div data-si-mousemove-trigger="100"  class="shuffle-me">
-                <a  name="gridID" href="gallery" class="info" target="_blank"></a>
+                <a  name="gridID" href="galleryDetail?goodsId=12" class="info" target="_parent"></a>
 
                 <div class="images">
                   <c:forEach items="${grid5}" var="gard" varStatus="status">
@@ -178,20 +180,33 @@
         <h3>Follow me</h3>
         <ul class="socials">
           <li>
-            <div class="fa fa-facebook"></div>
-            <a href="#">Be a fan on Facebook</a>
+            <div  class="fa fa-facebook"></div>
+            <a   style="cursor: pointer;" onclick="share()">Be a fan on QQ</a>
           </li>
           <li>
-            <div class="fa fa-twitter"></div>
-            <a href="#">Follow me on Twitter</a>
+              <div class="">
+            <div  class="fa fa-twitter"></div>
+            <a  class="share"  href="javascript:void(0)" style="cursor: pointer;">Follow me on ALLP</a>
+                  <p  hidden="hidden">
+                      $(document).ready(function(){ <br/>
+                      $('.share').SmohanPopLayer({  <br/>
+                      Shade : true, //是否显示遮罩层 <br/>
+                      Event:'click', //触发事件 <br/>
+                      Content : 'Share', //内容DIV ID <br/>
+                      Title : '分享到各大社区' //显示标题 <br/>
+                      }); <br/>
+                      });
+                  </p>
+
+              </div>
           </li>
           <li>
             <div class="fa fa-google-plus"></div>
-            <a href="#">Follow me on Google+</a>
+            <a style="cursor: pointer;" onclick="share()">Follow me on Google+</a>
           </li>
           <li>
             <div class="fa fa-youtube"></div>
-            <a href="#">Follow me on YouTube</a>
+            <a style="cursor: pointer;" onclick="share()">Follow me on YouTube</a>
           </li>
         </ul>
       </div>
@@ -223,12 +238,39 @@
       </div>
     </div>
   </div>
+
 </section>
 <!--==============================
               footer
 =================================-->
 <jsp:include page="common/footer.jsp"/>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
+
+<script type="text/javascript" src="../../js/smohan.pop&share.js"></script>
+<script type="text/javascript">
+    function share() {
+        (function () {
+            var p = {
+                url: location.href,
+                showcount: '1',
+                desc: 'do you  like this ?',
+                summary: 'https://github.com/everhopingandwaiting/capture_online',
+                title: 'create by john',
+                site: 'https://github.com/everhopingandwaiting/capture_online',
+                pics: 'https://github.com/everhopingandwaiting/capture_online',
+                style: '101',
+                width: 199,
+                height: 30
+            };
+            var s = [];
+            for (var i in p) {
+                s.push(i + '=' + encodeURIComponent(p[i] || ''));
+            }
+            document.write(['<a version="1.0" class="qzOpenerDiv" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?', s.join('&'), '" target="_parent">分享</a>'].join(''));
+        })();
+    }
+</script>
+
 </body>
 </html>
 

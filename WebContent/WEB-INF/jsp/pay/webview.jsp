@@ -49,7 +49,7 @@
     <jsp:include page="../common/footer.jsp"></jsp:include>
 
     <script type="text/javascript" src="https://one.pingxx.com/lib/pingpp_one.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript">/*
 //        var  order_no=document.getElementById("order_no").va
 var order_no = $("#order_no").val();
 document.addEventListener('pingpp_one_ready',function(){
@@ -98,7 +98,7 @@ document.addEventListener('pingpp_one_ready',function(){
     });
 });
 
-    </script>
+    */</script>
 
     <%--<script type="text/javascript">
         var script=document.createElement('script');
@@ -119,12 +119,12 @@ document.addEventListener('pingpp_one_ready',function(){
     </script>
 --%>
 
-    <%--<script src="../../../js/pingpp.js" type="text/javascript"></script>
-<script>
+    <script src="../../../js/pingpp.js" type="text/javascript"></script>
+<script type="text/javascript">
     function wap_pay(channel) {
         var amount = document.getElementById('amount').value * 100;
 
-        var pay_url = "http://localhost:8080/account";
+        var pay_url = "/account";
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", pay_url, true);
@@ -148,12 +148,12 @@ document.addEventListener('pingpp_one_ready',function(){
     // app_pay 需要配合 example-webview 的 iOS 或者 Android 项目使用。
     function app_pay(channel) {
         var amount = document.getElementById('amount').value * 100;
-        if (typeof PINGPP_IOS_SDK !== 'undefined') {
-            PINGPP_IOS_SDK.callPay(channel, amount);
-        } else if (typeof PINGPP_ANDROID_SDK !== 'undefined') {
-            PINGPP_ANDROID_SDK.callPay(channel, amount);
+        if (typeof pingpp_ios_sdk !== 'undefined') {
+            pingpp_ios_sdk.callPay(channel, amount);
+        } else if (typeof pingpp_android_sdk !== 'undefined') {
+            pingpp_android_sdk.callPay(channel, amount);
         }
     }
-</script>--%>
+</script>
 </body>
 </html>
