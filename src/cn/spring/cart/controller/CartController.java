@@ -37,9 +37,8 @@ import java.util.stream.Collectors;
 @RequestMapping("/")
 public class CartController {
     private Order order;
-    private OrderForm orderForm = new OrderForm();
+    private OrderForm orderForm;
     private List<CartForm> cartForms;
-    private String uuid = UUID.randomUUID().toString().replaceAll("\\-", "").substring(1, 20);
     @Autowired
 	CartService cartService;
 	
@@ -58,13 +57,6 @@ public class CartController {
 
 			cartService.addCart(cartForm);
             model.addAttribute("list", cartService.searchConditionCartList(cartForm));
-            orderForm.setGuest_id(uvo.getUserId());
-            cartForm.setGuestId(uvo.getUserId());
-            cartForms= cartService.searchConditionCartList(cartForm);
-            orderForm.setAmount(cartForms.stream().mapToInt
-                    (CartForm::getGoodsPrice).sum());
-            orderForm.setUuid(uuid);
-            model.addAttribute("order", orderForm);
             return "cart/cartList";
 		}
         model = FormUtil.model(new GoodsForm(), goodsService, model);
@@ -80,13 +72,13 @@ public class CartController {
 			cartForm.setGuestId(uvo.getUserId());
 			model.addAttribute("list", cartService.searchConditionCartList(cartForm));
            //init  orderForm
-
+            orderForm = new OrderForm();
             orderForm.setGuest_id(uvo.getUserId());
             cartForm.setGuestId(uvo.getUserId());
            cartForms= cartService.searchConditionCartList(cartForm);
             orderForm.setAmount(cartForms.stream().mapToInt
                     (CartForm::getGoodsPrice).sum());
-            orderForm.setUuid(uuid);
+            orderForm.setUuid(UUID.randomUUID().toString().replaceAll("\\-","").substring(1, 20));
             model.addAttribute("order", orderForm);
             return "cart/cartList";
 		}
@@ -102,14 +94,7 @@ public class CartController {
 			if (uvo != null) {
 				cartForm.setGuestId(uvo.getUserId());
 				model.addAttribute("list", cartService.searchConditionCartList(cartForm));
-                orderForm.setGuest_id(uvo.getUserId());
-                cartForm.setGuestId(uvo.getUserId());
-                cartForms= cartService.searchConditionCartList(cartForm);
-                orderForm.setAmount(cartForms.stream().mapToInt
-                        (CartForm::getGoodsPrice).sum());
-                orderForm.setUuid(uuid);
-                model.addAttribute("order", orderForm);
-                return "cart/cartList";
+				return "cart/cartList";
 			}
         model = FormUtil.model(new GoodsForm(), goodsService, model);
         return "index";
@@ -124,13 +109,6 @@ public class CartController {
         if (uvo != null) {
             cartForm.setGuestId(uvo.getUserId());
             model.addAttribute("list", cartService.searchConditionCartList(cartForm));
-            orderForm.setGuest_id(uvo.getUserId());
-            cartForm.setGuestId(uvo.getUserId());
-            cartForms= cartService.searchConditionCartList(cartForm);
-            orderForm.setAmount(cartForms.stream().mapToInt
-                    (CartForm::getGoodsPrice).sum());
-            orderForm.setUuid(uuid);
-            model.addAttribute("order", orderForm);
             return "cart/cartList";
         }
         model = FormUtil.model(new GoodsForm(), goodsService, model);
@@ -159,7 +137,7 @@ public class CartController {
         UVO uvo = (UVO) session.getAttribute("UVO");
         cartForm.setGuestId(uvo.getUserId());
         orderForm.setOrder_date(new Timestamp(new Date().getTime()));
-        cartService.CartToOrder(orderForm);
+
         model.addAttribute("order", orderForm);
 //        return "cart/cartEnd";
         //
@@ -180,11 +158,7 @@ public class CartController {
                 .boxed()
                 .collect(Collectors.toList()));
 //        return "pay/webview";
-        if (charge != null) {
-            orderForm.setId(cartService.searchOrderByDate(orderForm).getId());
-            orderForm.setStatus("PAY_YES");
-            cartService.OrderStatusUpdate(orderForm);
-        }
+        cartService.CartToOrder(orderForm);
         return charge;
     }
 

@@ -178,24 +178,6 @@
       </div>
       <div class="grid_4">
         <h3>Follow me</h3>
-          <div class="demo">
-              <a href="javascript:void(0)" class="share" style=" width:100px; text-align:center; line-height:30px; height:30px; margin:10px auto;font-size:16px; display:block; text-decoration:none; padding:10px; border:1px dashed #cfcfcf;">分享DEMO</a>
-
-              <p>
-                  弹出层单独使用说明：<br/>
-                  IE9以下无法圆角<br/>IE7以下未做测试
-              </p>
-              <p>
-                  $(document).ready(function(){ <br/>
-                  $('.share').SmohanPopLayer({  <br/>
-                  Shade : true, //是否显示遮罩层 <br/>
-                  Event:'click', //触发事件 <br/>
-                  Content : 'Share', //内容DIV ID <br/>
-                  Title : '分享Smohan到各大社区' //显示标题 <br/>
-                  }); <br/>
-                  });
-              </p>
-          </div>
         <ul class="socials">
           <li>
             <div  class="fa fa-facebook"></div>
@@ -204,14 +186,14 @@
           <li>
               <div class="">
             <div  class="fa fa-twitter"></div>
-            <a   class="share" id="share" href="javascript:void(0)" style="cursor: pointer;">Follow me on ALLP</a>
+            <a  class="share"  href="javascript:void(0)" style="cursor: pointer;">Follow me on ALLP</a>
                   <p  hidden="hidden">
                       $(document).ready(function(){ <br/>
                       $('.share').SmohanPopLayer({  <br/>
                       Shade : true, //是否显示遮罩层 <br/>
                       Event:'click', //触发事件 <br/>
                       Content : 'Share', //内容DIV ID <br/>
-                      Title : '分享Smohan到各大社区' //显示标题 <br/>
+                      Title : '分享到各大社区' //显示标题 <br/>
                       }); <br/>
                       });
                   </p>
@@ -263,7 +245,7 @@
 =================================-->
 <jsp:include page="common/footer.jsp"/>
 <a href="#" id="toTop" class="fa fa-chevron-up"></a>
-<script src="../../js/jquery.js"></script>
+
 <script type="text/javascript" src="../../js/smohan.pop&share.js"></script>
 <script type="text/javascript">
     function share() {
