@@ -45,7 +45,11 @@ public class FormUtil {
             }
 
         }
-
+        goodsForm.setType("blog");
+        goodsForm.setLimit(3);
+        map.put("listHotBlog", goodsService.searchConditionGoodsListHot(goodsForm));
+        model.addAllAttributes(map);
+        return model;
 /*        List<GoodsForm>[] grid = new ArrayList[6];
         Map<String, List> map = new HashMap<>();
         GoodsForm goodsForm = new GoodsForm();
@@ -84,10 +88,6 @@ public class FormUtil {
             }
         }*/
 
-        goodsForm.setType("blog");
-        goodsForm.setLimit(3);
-        map.put("listHotBlog", goodsService.searchConditionGoodsListHot(goodsForm));
-        model.addAllAttributes(map);
-        return model;
+
     }
 }
