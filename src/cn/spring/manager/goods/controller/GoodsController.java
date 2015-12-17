@@ -49,7 +49,7 @@ public class GoodsController {
 
 			goodsForm.setPicture("images/" + file.getOriginalFilename());
             goodsForm.setComment("");
-            goodsForm.setType(new String(goodsForm.getType()/*.getBytes("utf-8"), "utf-8")*/));
+            goodsForm.setType(new String(goodsForm.getType().getBytes("utf-8"), "utf-8"));
             goodsService.insertGoods(goodsForm);
             model = FormUtil.model(goodsForm, goodsService, model);
 

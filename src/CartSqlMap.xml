@@ -59,7 +59,7 @@
        </iterate>
    </update>
     <update id="OrderStatusUpdate" parameterClass="cn.spring.cart.form.OrderForm" >
-        UPDATE  order_tab SET status=#status#
+        UPDATE  order_tab SET status='PAY_YES'
         WHERE id=#id#
 
     </update>

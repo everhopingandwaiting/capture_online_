@@ -61,7 +61,7 @@
                                     <form  method="post" action="GlobalSearch">
                                     <div class="">
 
-                                        <input id="autocomplete" name="autocomplete" type="text" />
+                                        <input   onblur="chat()" id="autocomplete" name="autocomplete" type="text" />
                                         <button type="submit">search</button>
                                     </div>
                                         </form>
@@ -297,7 +297,7 @@ function ab () {
                             window.location.href='/GlobalSearch?autocomplete='+data.value ;
 
 
-                            console.log(resp);
+//                            console.log(resp);
                         }
 
 
@@ -335,7 +335,25 @@ function ab () {
 
 </script>
 <script type="text/javascript">
+   function chat() {
+       var dataC = $('#autocomplete').val();
+      // alert(dataC);
+       $.ajax({
+           type: 'POST',
+           url:'http://www.tuling123.com/openapi/api?key=6f8b3a4ae3115e76344904844d76f9be&info='+dataC,
+           success:function(resp) {
+//                            alert(data);
+//               window.location.href='/GlobalSearch?autocomplete='+data.value ;
+               alert(resp["text"]);
 
+
+//                            console.log(resp);
+           }
+
+
+       });
+   }
 </script>
 </body>
 </html>
+<%-- http://www.tuling123.com/openapi/api?key=6f8b3a4ae3115e76344904844d76f9be&info=你好--%>

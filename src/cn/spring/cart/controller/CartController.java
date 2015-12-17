@@ -137,7 +137,7 @@ public class CartController {
         UVO uvo = (UVO) session.getAttribute("UVO");
         cartForm.setGuestId(uvo.getUserId());
         orderForm.setOrder_date(new Timestamp(new Date().getTime()));
-
+        cartService.CartToOrder(orderForm);
         model.addAttribute("order", orderForm);
 //        return "cart/cartEnd";
         //
@@ -158,7 +158,10 @@ public class CartController {
                 .boxed()
                 .collect(Collectors.toList()));
 //        return "pay/webview";
-        cartService.CartToOrder(orderForm);
+
+
+
+
         return charge;
     }
 
@@ -166,7 +169,7 @@ public class CartController {
      *
      * @return
      */
-    @RequestMapping(value = "/cart/cartEnd")
+    @RequestMapping(value = "/cartEnd")
     public String cartEndForm() {
 
 
